@@ -14,9 +14,9 @@ Este repositório será utlilizado para armazenar os programas desenvolvidos dur
 ---
 
 #### Bibliotecas Utilizadas:
-Numpy - [docs](https://numpy.org/doc/)
-Pandas - [docs](https://pandas.pydata.org/docs/)
-Matplotlib - [docs](https://matplotlib.org/stable/index.html)
+* Numpy - [docs](https://numpy.org/doc/)
+* Pandas - [docs](https://pandas.pydata.org/docs/)
+* Matplotlib - [docs](https://matplotlib.org/stable/index.html)
 
 ---
 
