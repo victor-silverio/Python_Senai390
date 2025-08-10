@@ -204,6 +204,9 @@ cython_debug/
 # others
 .gslides
 Grupo-6.gslides
+kaggle.json
+.kaggle/
+Python_Senai390.code-workspace
 
 # Marimo
 marimo/_static/
