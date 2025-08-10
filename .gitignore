@@ -202,13 +202,34 @@ cython_debug/
 .cursorindexingignore
 
 # others
+#Ocultando slides do google
 .gslides
 Grupo-6.gslides
+
+#Ocultando API Key
 kaggle.json
 .kaggle/
+
+#Ocultando o workspace do vscode
 Python_Senai390.code-workspace
 
 # Marimo
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#Ocultando Desafio_Final
+Desafio_Final/
+
+#Ocultando Semanas ainda não realizadas
+#Ainda que o git não suba sem arquivos dentro, irei ocultar por garantia.
+
+Semana_2/
+Semana_3/
+Semana_4/
+Semana_5/
+Semana_6/
+
+#Outros
+desktop.ini
+a.txt

@@ -1,6 +1,13 @@
 # Python Senai390
 ---
 
+Repositório completo (Google Drive):
+[Google Drive](https://drive.google.com/drive/folders/1lIlfg3lXXLR5Ko0fZ1ZLkkrM22n5A0sK?usp=sharing)
+
+> Disponível SOMENTE para a Mari!
+> Caso ocorra erros, por favor entre em contato comigo.
+
+---
 
 # Atalhos
 
@@ -37,11 +44,11 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 ## Semana 5:
 
-## Desafios Plano de Ensino:
+## Desafio Final:
 
-1. MovieScope - [link](https://github.com/victor-silverio/Python_Senai390/tree/86607d8baa7ea3d0f4d44e63a5d0d830898be374/Desafios_Plano_De_Ensino/MovieScope)
+* #### MovieScope
 
-> Incompleto - em realização
+> Ocultado Temporariamente!
 
 ---
 
