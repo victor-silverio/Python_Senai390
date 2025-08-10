@@ -5,7 +5,7 @@
 # Atalhos
 
 * [Utilização:](#utilização)
-* [Links:](#links-utéis)
+* [Links:](#links)
 * [Bibliotecas Utilizadas:](#bibliotecas-utilizadas)
 * [Informações de contato:](#informações-de-contato)
 
