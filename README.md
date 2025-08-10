@@ -5,7 +5,7 @@
 # Atalhos
 
 * [Utilização:](#utilização)
-* [Links](#links-utéis)
+* [Links:](#links-utéis)
 * [Bibliotecas Utilizadas:](#bibliotecas-utilizadas)
 * [Informações de contato:](#informações-de-contato)
 
@@ -21,7 +21,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 ---
 
-# Links
+# Links:
 
 ## Semana 1:
 1.  Slides Aula 2 - Estatística Descritiva - [Slides](https://docs.google.com/presentation/d/14-FsQyQh4LLyxBIWpeNex_Eb2zvmUr-TntqgJfVJKT0/edit?usp=sharing)
