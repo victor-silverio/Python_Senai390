@@ -56,6 +56,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 # Informações de contato:
 
 email: [Victoraugusto4096@outlook.com](mailto:Victoraugusto4096@outlook.com)
+
 WhatsApp: [+55 (12) 99217-1061](https://wa.me//5512992171061?text=Olá,%20venho%20através%20do%20github)
 
 > Você pode clicar no número ou no email que eles irão te redirecionar automaticamente! 
