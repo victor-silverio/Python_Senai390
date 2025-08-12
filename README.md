@@ -24,14 +24,18 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 # Links:
 
 ## Semana 1:
+* Pasta da semana: [Pasta](Semana_1) 
+
 1.  Slides Aula 2 - Estatística Descritiva - [Slides](https://docs.google.com/presentation/d/14-FsQyQh4LLyxBIWpeNex_Eb2zvmUr-TntqgJfVJKT0/edit?usp=sharing)
 2. Grafícos Slides - [Notebook jupyter](Semana_1/Graficos_Slides.ipynb)
-3. Exemplos MarkDown - [Clique Aqui](https://github.com/victor-silverio/Python_Senai390/blob/c0421fcdc66f25a396104885a6f6a20b7673e8fe/Semana_1/Markdown_Exemplos_(Aula_3).md)
-4. Média, Moda, Mediana, Amplitude, Variancia e Desvio Padrão através de Pandas e Numpy - [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/ba028386a794a93c3655daa9abcbc412b30bc715/Semana%201/Aula_3.ipynb)
+3. Exemplos MarkDown - [Clique Aqui](Semana_1/Markdown_Exemplos_(Aula_3).md)
+4. Média, Moda, Mediana, Amplitude, Variancia e Desvio Padrão através de Pandas e Numpy - [Notebook jupyter](Semana_1/Aula_3.ipynb)
 
 ## Semana 2:
-1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/7cf687fbdcad5dd93a523f4d6018a696459a73c0/Semana_2/Atividade_1.ipynb)
-2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/c0421fcdc66f25a396104885a6f6a20b7673e8fe/Semana_2/Atividade-Estat%C3%ADstica_Descritiva_e_Medidas_de_Dispers%C3%A3o.ipynb)
+* Pasta da semana: [Pasta](Semana_2) 
+
+1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](Semana_2/Atividade-Introdução_ao_Colab_e_uso_da_lib_statstics.ipynb)
+2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](Semana_2/Atividade-Estatística_Descritiva_e_Medidas_de_Dispersão.ipynb)
 
 
 ## Semana 3:
