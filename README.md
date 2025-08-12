@@ -31,7 +31,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 ## Semana 2:
 1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/7cf687fbdcad5dd93a523f4d6018a696459a73c0/Semana_2/Atividade_1.ipynb)
-2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter]()
+2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/c0421fcdc66f25a396104885a6f6a20b7673e8fe/Semana_2/Atividade-Estat%C3%ADstica_Descritiva_e_Medidas_de_Dispers%C3%A3o.ipynb)
 
 
 ## Semana 3:
