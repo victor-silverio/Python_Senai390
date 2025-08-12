@@ -1,11 +1,4 @@
 # Python Senai390
----
-
-Repositório completo (Google Drive):
-[Google Drive](https://drive.google.com/drive/folders/1lIlfg3lXXLR5Ko0fZ1ZLkkrM22n5A0sK?usp=sharing)
-
-> Disponível SOMENTE para a Mari!
-> Caso ocorra erros, por favor entre em contato comigo.
 
 ---
 
@@ -37,6 +30,9 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 4. Média, Moda, Mediana, Amplitude, Variancia e Desvio Padrão através de Pandas e Numpy - [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/ba028386a794a93c3655daa9abcbc412b30bc715/Semana%201/Aula_3.ipynb)
 
 ## Semana 2:
+1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](https://github.com/victor-silverio/Python_Senai390/blob/7cf687fbdcad5dd93a523f4d6018a696459a73c0/Semana_2/Atividade_1.ipynb)
+2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter]()
+
 
 ## Semana 3:
 
