@@ -24,7 +24,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 # Links:
 
 ## Semana 1:
-* Pasta da semana: [Pasta](Semana_1) 
+* Pasta da semana 1: [Pasta](Semana_1) 
 
 1.  Slides Aula 2 - Estatística Descritiva - [Slides](https://docs.google.com/presentation/d/14-FsQyQh4LLyxBIWpeNex_Eb2zvmUr-TntqgJfVJKT0/edit?usp=sharing)
 2. Grafícos Slides - [Notebook jupyter](Semana_1/Graficos_Slides.ipynb)
@@ -32,7 +32,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 4. Média, Moda, Mediana, Amplitude, Variancia e Desvio Padrão através de Pandas e Numpy - [Notebook jupyter](Semana_1/Aula_3.ipynb)
 
 ## Semana 2:
-* Pasta da semana: [Pasta](Semana_2) 
+* Pasta da semana 2: [Pasta](Semana_2) 
 
 1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](Semana_2/Atividade-Introdução_ao_Colab_e_uso_da_lib_statstics.ipynb)
 2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](Semana_2/Atividade-Estatística_Descritiva_e_Medidas_de_Dispersão.ipynb)
