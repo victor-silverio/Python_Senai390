@@ -55,4 +55,14 @@ media_geral = colunas_variaveis.mean()
 
 # Impressões:
 
+print("Iniciando analises: ")
 
+print ("\n", "=+=+=+="*10, "\n") #Separador bonitinho que aprendi a fazer
+
+print("Cabeçalho do database: ", df.head())
+
+print ("\n", "=+=+=+="*10, "\n")
+
+print("Informações gerais do database: ", df.info())
+
+print ("\n", "=+=+=+="*10, "\n")
