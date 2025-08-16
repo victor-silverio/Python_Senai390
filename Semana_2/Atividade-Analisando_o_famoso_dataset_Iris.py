@@ -121,7 +121,7 @@ print(Max_especies)
 
 print("\n", "---"*15, "\n")
 
-print("Através dessa análise, podemos notar que as setosas são as menores, pois os comprimentos das petalas variam de 1,0 até 1,9. Enquanto as versicolon e a virginica variam: 3,0 - 5,1 & 4,5 - 6,9 respectivamente. Isso mostra que, em uma situação real, seria fácil distinguir uma setosa das outras 2, mas não ums versicolor e uma virginica em seus tamanhos médios.")
+print("Através dessa análise, podemos notar que as setosas são as menores, pois os comprimentos das petalas variam de 1,0 até 1,9. Enquanto as versicolon e a virginica variam: 3,0 - 5,1 & 4,5 - 6,9 respectivamente. Isso mostra que, em uma situação real, seria fácil distinguir uma setosa das outras 2, mas não uma versicolor de uma virginica em seus tamanhos médios.")
 
 print("\n", "=+=+=+="*10, "\n")
 
