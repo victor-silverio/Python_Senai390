@@ -88,16 +88,18 @@ print("Através dessa análise, podemos extrair que, a média de tamanho (compri
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 2 ----")
+print("Desvio padrão por espécie:")
 
 print(desvio_especies)
 
 print("\n", "---"*15, "\n")
 
-print("")
+print("O desvio padrão, mostra a dispersão dos dados em relação à média, e através da análise, podemos notar que: A espécie setosa, apresenta a menor variação na largura/comprimento de suas pétalas, sendo mais uniforme. a espécie virginica, possui uma maior variação que a setosa, e assim podemos extrair que, ela possui uma maior diversidade de tamanho que as setosas.")
 
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 3 ----")
+print("Contagem de observações por espécie:")
 
 print(contagem_especies)
 
@@ -108,8 +110,10 @@ print("")
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 4 ----")
+print("Valores Mínimos e Máximos por Espécie:")
 
 print(Min_especies)
+print("---"*25)
 print(Max_especies)
 
 print("\n", "---"*15, "\n")
@@ -119,6 +123,7 @@ print("")
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 5 ----")
+print("Média geral das variáveis:")
 
 print(media_geral)
 
