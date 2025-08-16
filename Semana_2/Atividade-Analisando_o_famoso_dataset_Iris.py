@@ -38,7 +38,10 @@ desvio_especies = agrupado_especies.std()
 
 contagem_especies = agrupado_especies.size()
 
+# Valor Min & Max (4)
 
+Min_especies = agrupado_especies.min()
+Max_especies = agrupado_especies.max()
 
 
 
