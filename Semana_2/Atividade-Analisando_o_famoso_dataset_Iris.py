@@ -6,11 +6,11 @@ Data Ínicio: 16/08 - 02:12
 
 Objetivos: 
 
-1. Qual é a média (por espécie) de cada medida (sepal/petal, comprimento/largura)?
-2. Qual é o desvio padrão de cada variável por espécie?
-3. Quantas observações existem por espécie? (contagem de instâncias)
-4. Qual é o valor mínimo e máximo (amplitude) das medidas por espécie para saber a dispersão?
-5. Qual é a média geral (sem agrupamento) das variáveis — comparando contexto geral e por espécie?
+1. Qual é a média (por espécie) de cada medida (sepal/petal, comprimento/largura)? ✅
+2. Qual é o desvio padrão de cada variável por espécie? ✅
+3. Quantas observações existem por espécie? (contagem de instâncias) ✅
+4. Qual é o valor mínimo e máximo (amplitude) das medidas por espécie para saber a dispersão? ✅
+5. Qual é a média geral (sem agrupamento) das variáveis — comparando contexto geral e por espécie? ✅
 
 "✅" / "❌" (To salvando aqui pra usar como demarcação de progresso)
 '''
