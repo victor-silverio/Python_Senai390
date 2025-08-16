@@ -34,6 +34,11 @@ media_especies = agrupado_especies.mean()
 
 desvio_especies = agrupado_especies.std()
 
+# Contagem por especie (3)
+
+contagem_especies = agrupado_especies.size()
+
+
 
 
 
