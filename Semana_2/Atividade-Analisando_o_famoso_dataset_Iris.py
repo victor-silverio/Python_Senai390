@@ -6,18 +6,37 @@ Data Ínicio: 16/08 - 02:12
 
 Objetivos: 
 
-Qual é a média (por espécie) de cada medida (sepal/petal, comprimento/largura)?
-Qual é o desvio padrão de cada variável por espécie?
-Quantas observações existem por espécie? (contagem de instâncias)
-Qual é o valor mínimo e máximo (amplitude) das medidas por espécie para saber a dispersão?
-Qual é a média geral (sem agrupamento) das variáveis — comparando contexto geral e por espécie?
+1. Qual é a média (por espécie) de cada medida (sepal/petal, comprimento/largura)?
+2. Qual é o desvio padrão de cada variável por espécie?
+3. Quantas observações existem por espécie? (contagem de instâncias)
+4. Qual é o valor mínimo e máximo (amplitude) das medidas por espécie para saber a dispersão?
+5. Qual é a média geral (sem agrupamento) das variáveis — comparando contexto geral e por espécie?
 
+"✅" / "❌" (To salvando aqui pra usar como demarcação de progresso)
 '''
 
 import pandas as pd
+import io
 
-path = r'C:\Users\victo\Python_Senai390\Semana_2\iris.csv'
+path = r'C:\Users\victo\Python_Senai390\Semana_2\iris.csv' #path só pra ficar bonitinho
 
 df = pd.read_csv(path)
 
-print(df.head())
+# Analises:
+
+agrupado_especies = df.groupby('species') #Aqui, eu agrupo por especies
+
+# Média por espécie (1)
+
+media_especies = agrupado_especies.mean()
+
+
+
+
+
+
+
+
+# Impressões:
+
+
