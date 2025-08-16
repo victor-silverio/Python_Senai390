@@ -105,7 +105,7 @@ print(contagem_especies)
 
 print("\n", "---"*15, "\n")
 
-print("")
+print("Através dessa análise, podemos ver que o database é balanceado, possuindo 50 observações/entradas de cada espécie.")
 
 print("\n", "=+=+=+="*10, "\n")
 
@@ -118,7 +118,7 @@ print(Max_especies)
 
 print("\n", "---"*15, "\n")
 
-print("")
+print("Através dessa análise, podemos notar que as setosas são as menores, pois os comprimentos das petalas variam de 1,0 até 1,9. Enquanto as versicolon e a virginica variam: 3,0 - 5,1 & 4,5 - 6,9 respectivamente. Isso mostra que, em uma situação real, seria fácil distinguir uma setosa das outras 2, mas não ums versicolor e uma virginica em seus tamanhos médios.")
 
 print("\n", "=+=+=+="*10, "\n")
 
@@ -129,6 +129,6 @@ print(media_geral)
 
 print("\n", "---"*15, "\n")
 
-print("")
+print("Ao analisarmos as médias gerais, notamos o quanto ela pode ser afetada por outliers, já que, por exemplo, a média geral de comprimento das pétalas, é de 3,75, mas, na análise 1, podemos ver que essa média não bate representa as espécies em geral, pois nenhuma apresenta esse valor. (E nem próximo, pois a setosa é de 1,4, a versicolor de 4,2 e a virginica de 5,5. Afastadas relativamente de 3,75.).")
 
 print("\n", "=+=+=+="*10, "\n")
