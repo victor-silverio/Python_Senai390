@@ -43,11 +43,15 @@ contagem_especies = agrupado_especies.size()
 Min_especies = agrupado_especies.min()
 Max_especies = agrupado_especies.max()
 
+# Media geral (5)
 
+#Como é a visão geral das variaveis, precisamos separar por elas
 
+colunas_variaveis = df.select_dtypes(include=['number'])
 
+# E após isso, fazemos a média geral:
 
-
+media_geral = colunas_variaveis.mean()
 
 # Impressões:
 
