@@ -64,12 +64,12 @@ print("Iniciando analises: ")
 
 print ("\n", "=+=+=+="*10, "\n") #Separador bonitinho que aprendi a fazer
 
-print("Cabeçalho do database: ")
+print("Cabeçalho do database: \n")
 print(df.head())
 
 print ("\n", "=+=+=+="*10, "\n")
 
-print("Informações gerais do database: ")
+print("Informações gerais do database: \n")
 print(df.info())
 
 print("\n", "=+=+=+="*10, "\n")
@@ -77,7 +77,7 @@ print("\n", "=+=+=+="*10, "\n")
 print("Análises específicas: \n")
 
 print("---- Análise 1 ----")
-print("Média por espécie de cada uma das medidas:")
+print("Média por espécie de cada uma das medidas: \n")
 
 print(media_especies)
 
@@ -88,7 +88,7 @@ print("Através dessa análise, podemos extrair que, a média de tamanho (compri
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 2 ----")
-print("Desvio padrão por espécie:")
+print("Desvio padrão por espécie: \n")
 
 print(desvio_especies)
 
@@ -99,7 +99,7 @@ print("O desvio padrão, mostra a dispersão dos dados em relação à média, e
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 3 ----")
-print("Contagem de observações por espécie:")
+print("Contagem de observações por espécie: \n")
 
 print(contagem_especies)
 
@@ -110,7 +110,7 @@ print("Através dessa análise, podemos ver que o database é balanceado, possui
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 4 ----")
-print("Valores Mínimos e Máximos por Espécie:")
+print("Valores Mínimos e Máximos por Espécie: \n")
 
 print(Min_especies)
 print("---"*25)
@@ -123,7 +123,7 @@ print("Através dessa análise, podemos notar que as setosas são as menores, po
 print("\n", "=+=+=+="*10, "\n")
 
 print("---- Análise 5 ----")
-print("Média geral das variáveis:")
+print("Média geral das variáveis: \n")
 
 print(media_geral)
 
