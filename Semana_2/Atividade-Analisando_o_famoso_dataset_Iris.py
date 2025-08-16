@@ -13,10 +13,11 @@ Objetivos:
 5. Qual é a média geral (sem agrupamento) das variáveis — comparando contexto geral e por espécie? ✅
 
 "✅" / "❌" (To salvando aqui pra usar como demarcação de progresso)
+
+Obs: Desenvolvi em .py, mas irei postar em notebook .ipynb também, pois aí dá pra ver o output sem executar.
 '''
 
 import pandas as pd
-import io
 
 path = r'C:\Users\victo\Python_Senai390\Semana_2\iris.csv' #path só pra ficar bonitinho
 
@@ -53,7 +54,11 @@ colunas_variaveis = df.select_dtypes(include=['number'])
 
 media_geral = colunas_variaveis.mean()
 
+
 # Impressões:
+'''
+Aqui, separei as impressões, e adicionei mais algumas, por isso o output geral vai ser um pouco maior que o esperado.
+'''
 
 print("Iniciando analises: ")
 
@@ -69,35 +74,56 @@ print(df.info())
 
 print("\n", "=+=+=+="*10, "\n")
 
-print("Análises específicas: ")
+print("Análises específicas: \n")
 
-print("Analise 1: ")
+print("---- Análise 1 ----")
+print("Média por espécie de cada uma das medidas:")
 
 print(media_especies)
 
+print("\n", "---"*15, "\n")
+
+print("Através dessa análise, podemos extrair que, a média de tamanho (comprimento) sepal das espécies varia de ~5 até ~6,6, e sua largura varia de ~2,7 até ~3,4. Já o comprimeinto petal, varia de ~1,4 até 5,5, e sua largura de 0,2 até 2,0. Descobrindo assim, que existe uma variação entre espécies, e ela não é mínima.")
+
 print("\n", "=+=+=+="*10, "\n")
 
-print("Analise 2: ")
+print("---- Análise 2 ----")
 
 print(desvio_especies)
 
+print("\n", "---"*15, "\n")
+
+print("")
+
 print("\n", "=+=+=+="*10, "\n")
 
-print("Analise 3: ")
+print("---- Análise 3 ----")
 
 print(contagem_especies)
 
+print("\n", "---"*15, "\n")
+
+print("")
+
 print("\n", "=+=+=+="*10, "\n")
 
-print("Analise 4: ")
+print("---- Análise 4 ----")
 
 print(Min_especies)
 print(Max_especies)
 
+print("\n", "---"*15, "\n")
+
+print("")
+
 print("\n", "=+=+=+="*10, "\n")
 
-print("Analise 5: ")
+print("---- Análise 5 ----")
 
 print(media_geral)
+
+print("\n", "---"*15, "\n")
+
+print("")
 
 print("\n", "=+=+=+="*10, "\n")
