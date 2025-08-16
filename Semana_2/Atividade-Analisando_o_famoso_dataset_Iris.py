@@ -76,3 +76,13 @@ print("Analise 1: ")
 print(media_especies)
 
 print("\n", "=+=+=+="*10, "\n")
+
+print("Analise 2: ")
+
+print(desvio_especies)
+
+print("\n", "=+=+=+="*10, "\n")
+
+print("Analise 3: ")
+
+print(contagem_especies)
