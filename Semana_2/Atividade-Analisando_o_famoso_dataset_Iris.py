@@ -3,6 +3,9 @@ Nome: Victor Augusto
 
 Atividade: Analisando o famoso dataset Iris
 Data Ínicio: 16/08 - 02:12
+Data Final: 16/08 - 03:30
+
+Sim, fiz de madrugada.
 
 Objetivos: 
 
