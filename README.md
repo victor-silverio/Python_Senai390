@@ -36,7 +36,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](Semana_2/Atividade-Introdução_ao_Colab_e_uso_da_lib_statstics.ipynb)
 2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](Semana_2/Atividade-Estatística_Descritiva_e_Medidas_de_Dispersão.ipynb)
-
+3. Atividade - Analisando o famoso dataset Iris
 
 ## Semana 3:
 
