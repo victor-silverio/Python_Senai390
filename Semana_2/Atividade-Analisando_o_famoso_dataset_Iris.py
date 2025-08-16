@@ -86,3 +86,18 @@ print("\n", "=+=+=+="*10, "\n")
 print("Analise 3: ")
 
 print(contagem_especies)
+
+print("\n", "=+=+=+="*10, "\n")
+
+print("Analise 4: ")
+
+print(Min_especies)
+print(Max_especies)
+
+print("\n", "=+=+=+="*10, "\n")
+
+print("Analise 5: ")
+
+print(media_geral)
+
+print("\n", "=+=+=+="*10, "\n")
