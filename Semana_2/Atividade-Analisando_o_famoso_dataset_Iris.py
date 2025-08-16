@@ -30,6 +30,10 @@ agrupado_especies = df.groupby('species') #Aqui, eu agrupo por especies
 
 media_especies = agrupado_especies.mean()
 
+# Desvio padrão (2)
+
+desvio_especies = agrupado_especies.std()
+
 
 
 
