@@ -59,10 +59,20 @@ print("Iniciando analises: ")
 
 print ("\n", "=+=+=+="*10, "\n") #Separador bonitinho que aprendi a fazer
 
-print("Cabeçalho do database: ", df.head())
+print("Cabeçalho do database: ")
+print(df.head())
 
 print ("\n", "=+=+=+="*10, "\n")
 
-print("Informações gerais do database: ", df.info())
+print("Informações gerais do database: ")
+print(df.info())
 
-print ("\n", "=+=+=+="*10, "\n")
+print("\n", "=+=+=+="*10, "\n")
+
+print("Análises específicas: ")
+
+print("Analise 1: ")
+
+print(media_especies)
+
+print("\n", "=+=+=+="*10, "\n")
