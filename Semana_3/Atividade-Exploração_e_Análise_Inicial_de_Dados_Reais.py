@@ -29,7 +29,7 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         Noisy
         Peaceful
         disrupted
-        *há 1 valor em branco (Necessita de tratamento)
+        *há 1 valor em branco (Precisa de tratamento)
 
 6. What coping strategy you use as a student?
     Armazena o relato do estudante de como lida com o estresse, variando de:
@@ -68,8 +68,10 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
     2. Além disso, notei que os nomes das colunas apresentam espaços, aspas, e outras incongruencias e são grandes demais, para melhorar isso, irei renomear as colunas. (✅)
         (Para facilitar minha vida, vou manter em inglês)
     3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
+    4. Realizar a conversão de valores na coluna "study_environment" de valores textuais (objects) para valores numericos (int). (✅)
+        Motivo: O texto que define o ambiente de estudos impede a criação de um grafico de dispersão, que irei realizar na analise 3, então para isso irei converter para uma escala de 1 a 3, representando 1 o ambiente Peaceful, 2 o ambiente Noisy e 3 o ambiente disrupted.
         
-5. Análise dos dados (❌~✅)
+5. Análise dos dados (EM ANDAMENTO)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
         1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (✅)
             Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
@@ -92,6 +94,8 @@ Observações:
 * To tentando mudar a minha organização de código para scripts maiores, essa vai ser a minha primeira vez fazendo isso em python, então pode ficar meio cheio de comentarios.
 
 * Se tiver faltando acentos nas palavras é porque o vscode não corrige acentuação ainda (eu não tenho uma extensão para isso, nem sei se existe)
+
+* Talvez eu tenha excedido o conteudo e o nível ensinado em sala de aula até o momento, pois aprendi algumas manipulações novas e outras maneiras de se analisar um conjunto de dados por conta própria. 
 
 '''
 # Bibliotecas
@@ -137,12 +141,24 @@ df_tratado_1 = df_tratado.rename(columns={ # Renomeia colunas
     #'': '',
 })
 
+# Trocando os valores textuais (object), para valores numericos:
+
+mapeamento_novo_ambiente = {
+    'Peaceful': 1,
+    'Noisy': 2,
+    'disrupted': 3   
+}
+
+df_tratado_1['study_environment'] = df_tratado_1['study_environment'].map(mapeamento_novo_ambiente)
+
 # Removendo as colunas inutilizadas na minha analise.
 
 df_final = df_tratado_1.drop(['timestamp', 'pressure_schoolmates', 'pressure_family', 'coping_strategy', 'bad_habits'], axis=1)
 
 # Confirmação do tratamento:
 
+print("\n", "---"*15, "\n")
+print("APÓS A REALIZAÇÃO DO TRATAMENTO: ")
 print("\n", "---"*15, "\n")
 print(df_final.info())
 print("\n", "---"*15, "\n")
