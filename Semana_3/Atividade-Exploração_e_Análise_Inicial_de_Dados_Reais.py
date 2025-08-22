@@ -146,66 +146,12 @@ print("\n", "---"*15, "\n")
 print(df_final.info())
 print("\n", "---"*15, "\n")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Seção 5:
 # Análise 1:
 # 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
 # Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
-#media_estresse_ensino_medio = df_tratado.groupby('')
+# Inicialmente, iremos realizar somente os calculos filtrados por niveis academicos:
+
+media_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].mean()
+print(media_estresse_nivel_academico)
