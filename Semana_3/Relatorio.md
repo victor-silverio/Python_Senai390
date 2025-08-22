@@ -17,9 +17,9 @@
 
 ## Dataset:
 
-Para a minha análise, resolvi escolher um dataset na plataforma Kaggle, para ser mais específico, um dataset que trata sobre o estresse no ambiente acadêmico, em 3 aréas: Ensino Médio (high school), Graduação (undergraduate) e Pós Graduação (pos-graduate). 
+Para a minha análise, resolvi escolher um dataset na plataforma Kaggle, para ser mais específico, um dataset que trata sobre o estresse no ambiente acadêmico, em 3 áreas: Ensino Médio (high school), Graduação (undergraduate) e Pós Graduação (pos-graduate). 
 
-Ele está disponivél para download na seguinte url:
+Ele está disponível para download na seguinte url:
 
 https://www.kaggle.com/datasets/poushal02/student-academic-stress-real-world-dataset
 
@@ -79,7 +79,7 @@ Os dados se encontram salvos em csv, separados por 9 colunas, sendo elas:
 --- Plano de Ação --- 
 
 #### 1. Baixar e Carregar Arquivos:
-> Realizei o download do dataset via script pré pronto disponivel no kaggle, e após isso movi ele manualmente para a pasta de uso final. O script utilizado está disponivel em: [Download.py](https://github.com/victor-silverio/Python_Senai390/blob/main/Semana_3/Download.py)
+> Realizei o download do dataset via script pré pronto disponível no kaggle, e após isso movi ele manualmente para a pasta de uso final. O script utilizado está disponível em: [Download.py](https://github.com/victor-silverio/Python_Senai390/blob/main/Semana_3/Download.py)
 
 #### 2. Visualização inicial dos dados:
 > Através do comando " .head" para uma visualização inicial da estrutura
@@ -92,7 +92,7 @@ Os dados se encontram salvos em csv, separados por 9 colunas, sendo elas:
 
 > 1. Apaguei o registro incompleto para uniformidade de dados, usando o " .dropna", e ficando com 139 registros íntegros.
 
-> 2. Após notar que os nomes das colunas apresentam espaços, aspas, e outras incongruências, e para melhorar isso, realizei o renomeamento via " .rename", para nomes mais curtos e de entendimento rápido.
+> 2. Após notar que os nomes das colunas apresentam espaços, aspas, e outras incongruências, e para melhorar isso, realizei o renomeando via " .rename", para nomes mais curtos e de entendimento rápido.
 
 > 3. Exclui as colunas desnecessárias da minha análise. 
     >> De  certa forme é uma economia de recursos, mas para á escala deste dataset, se trata de uma ferramenta para melhor organização.
@@ -252,3 +252,23 @@ Os resultados de tendência central e dispersão do nível de estresse por está
 ---
 
 ## Comentários:
+
+Através dos dados adquiridos, é possível notar que os estudantes do ensino médio relataram maior estresse, com uma média de 3,83. 
+
+Além disso, a mediana e a moda de todos os estágios foi 4, ou seja, a maior parte dos dados apontam um nível de estresse 4, de uma escala de 0 a 5.
+
+Os dados de estresse da pós graduação são mais uniformes, indicando que o estresse relatado é parecido. Ainda que o espectro de dados deste nível escolar seja menor, oque pode causar essa falsa impressão. 
+
+Já a graduação e o ensino médio apresentam maior dispersão dos dados, oque indica experiencias sobre os estresse serem mais diversas
+
+Como generalização, podemos notar que todos os estudantes relataram que a vida acadêmica é estressante, e principalmente os do ensino médio, que relataram um estresse mais alto.
+
+> Tadinhos, vão sofrer mais na graduação. Ensino médio foi muito tranquilo em comparação com a minha vida atual. 
+
+## Gráficos:
+
+Inicialmente, temos 3 gráficos, mostrando o nivel de estresse relatado por estágio de ensino:
+
+![Ensino Médio](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_ensino_medio.png) 
+![Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_gradua%C3%A7%C3%A3o.png)
+![Pós Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_pos_gradua%C3%A7%C3%A3o.png) 
