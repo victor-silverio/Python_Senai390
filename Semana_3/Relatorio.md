@@ -6,6 +6,13 @@
 
 1. [Dataset Escolhido](#dataset)
 2. [Plano de Análise/Ação](#plano-de-Ação)
+3. [Tratamento](#tratamento) 
+4. [Resultados & Análise](#resultados-e-análise)
+3.1 [Análise 1](#análise-1)
+
+
+
+
 ---
 
 ## Dataset:
@@ -71,34 +78,133 @@ Os dados se encontram salvos em csv, separados por 9 colunas, sendo elas:
 
 --- Plano de Ação --- 
 
-#### 1. Baixar e Carregar Arquivos
-Realizei o download do dataset via script pré pronto disponivel no kaggle, e após isso movi ele manualmente para a pasta de uso final. O script utilizado está disponivel em: 
+#### 1. Baixar e Carregar Arquivos:
+> Realizei o download do dataset via script pré pronto disponivel no kaggle, e após isso movi ele manualmente para a pasta de uso final. O script utilizado está disponivel em: [Download.py](https://github.com/victor-silverio/Python_Senai390/blob/main/Semana_3/Download.py)
 
+#### 2. Visualização inicial dos dados:
+> Através do comando " .head" para uma visualização inicial da estrutura
 
-
-Baixei através de outro script e minha apikey, o scrip está disponível na mesma pasta nomeado como "Download.py", mas, para sua execução é necessário uma apikey valida.
-
-#### 2. Visualização inicial dos dados (✅)
-    Usei o "df.head"
-
-3. Avaliar informações e variações (✅)
-    Através do comando "df.info", pude notar que há uma inconsistência nos dados (Em somente uma linha). Então para isso, irei deletar ela para uma maior uniformidade.
+#### 3. Avaliar informações e variações
+> Através do comando " .info", pude notar que há uma inconsistência nos dados (Em somente uma linha). E irei tratar ela na proxima etapa.
     
-4. Tratamento dos dados (✅)
-    1. Apaguei o registro incompleto para uniformidade de dados, usando o "df.dropna", e ficando com 139 registros íntegros. (✅)
-    2. Além disso, notei que os nomes das colunas apresentam espaços, aspas, e outras incongruências e são grandes demais, para melhorar isso, irei renomear as colunas. (✅)
-        (Para facilitar minha vida, vou manter em inglês)
-    3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
-         
-5. Análise dos dados (EM ANDAMENTO)
-    Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
-        1. Avaliar nível de estresse acadêmico relatado, por nível acadêmico, através de análise analítica (✅)
-            Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível acadêmico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
-        
-        2. Avaliar se o stress acadêmico relatado tem relação com a competição acadêmica relatada. (✅)
-            Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
-            
-        3. Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse (❌)
-            Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo, e se, ambientes ruins geram níveis de estresse maiores. 
+#### 4. Tratamento dos dados
+> Para realizar o tratamento adequado, dividi ele em 3 etapas, sendo elas:
 
-    Com essas 3 abordagens, espero trazer uma ampla visão do dataset, abordando ele de diversas maneiras.
+> 1. Apaguei o registro incompleto para uniformidade de dados, usando o " .dropna", e ficando com 139 registros íntegros.
+
+> 2. Após notar que os nomes das colunas apresentam espaços, aspas, e outras incongruências, e para melhorar isso, realizei o renomeamento via " .rename", para nomes mais curtos e de entendimento rápido.
+
+> 3. Exclui as colunas desnecessárias da minha análise. 
+    >> De  certa forme é uma economia de recursos, mas para á escala deste dataset, se trata de uma ferramenta para melhor organização.
+    >>> Poderia ter somente selecionado as colunas que iria utilizar, mas optei por apagar.
+
+#### 5. Análise dos dados
+> O dataset escolhido possui 9 colunas, dentre elas, escolhi realizar 3 vistas do dataset, focando principalmente sobre o nível de estresse.
+
+> 1. Avaliar nível de estresse acadêmico relatado, por nível acadêmico, através de análise analítica e visualização gráfica.
+    >> Análises de tendencia central e de dispersão, além de 5 gráficos de colunas, sendo eles:
+        >>> Distribuição do estresse no Ensino Médio (high school).
+        >>> Distribuição do estresse na Graduação (undergraduate).
+        >>> Distribuição do estresse na Pós Graduação (pos-graduate).
+        >>> Distribuição média do estresse entre os 3 níveis de ensino 
+        >>>> * São 2, "com zoom" & "sem zoom", e isso será explicado mais a frente.
+        
+> 2. Avaliar se o stress acadêmico relatado tem relação com a competição acadêmica relatada.
+    >> Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
+            
+> 3. Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse
+    >> Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo, e se, ambientes ruins geram níveis de estresse maiores. 
+
+Com essas 3 abordagens, espero trazer uma ampla visão do dataset, abordando ele de diversas maneiras.
+
+## Tratamento:
+
+Realizei o tratamento em 3 etapas, sendo a primeira o descarte de linhas com valores nulos
+
+```python
+# Seção 4:
+# Tratamento dos dados:
+
+df_tratado = df.dropna() # Limpa valores nulos
+```
+A segunda etapa foi renomear as colunas:
+```python
+df_tratado_1 = df_tratado.rename(columns={ # Renomeia colunas
+
+    'Timestamp': 'timestamp',
+    'Your Academic Stage': 'academic_stage', # Em uso
+    'Peer pressure': 'pressure_schoolmates', 
+    'Academic pressure from your home': 'pressure_family',
+    'Study Environment': 'study_environment', # Em uso
+    'What coping strategy you use as a student?': 'coping_strategy', 
+    'Do you have any bad habits like smoking, drinking on a daily basis?': 'bad_habits',
+    'What would you rate the academic  competition in your student life': 'academic_competition', # Em uso
+    'Rate your academic stress index ': 'stress' # Em uso
+    #'': '',
+})
+```
+E a ultima etapa, a remoção das colunas não utilizadas na análise.
+```python
+# Removendo as colunas inutilizadas na minha analise.
+
+df_final = df_tratado_1.drop(['timestamp', 'pressure_schoolmates', 'pressure_family', 'coping_strategy', 'bad_habits'], axis=1)
+```
+Como parte final, confirmei o sucesso do tratamento:
+
+```python
+print("\n", "---"*15, "\n")
+print("APÓS A REALIZAÇÃO DO TRATAMENTO: ")
+print("\n", "---"*15, "\n")
+print(df_final.info())
+print("\n", "---"*15, "\n")
+```
+
+### Confirmação do tratamento:
+Para fins de exibição, a saída foi:
+
+```bash
+ --------------------------------------------- 
+
+APÓS A REALIZAÇÃO DO TRATAMENTO: 
+
+ --------------------------------------------- 
+
+<class 'pandas.core.frame.DataFrame'>
+Index: 139 entries, 0 to 139
+Data columns (total 4 columns):
+ #   Column                Non-Null Count  Dtype 
+---  ------                --------------  ----- 
+ 0   academic_stage        139 non-null    object
+ 1   study_environment     139 non-null    object
+ 2   academic_competition  139 non-null    int64 
+ 3   stress                139 non-null    int64 
+dtypes: int64(2), object(2)
+memory usage: 5.4+ KB
+None
+
+ --------------------------------------------- 
+```
+
+## Resultados e Análise:
+
+Nessa etapa irei exibir os resultados brutos das análises, além de exibição de gráficos e discussão sobre os resultados.
+
+---
+
+### Análise 1
+
+> Calculo das medidas de tendencia central e de dispersão
+
+---
+
+Para realizar a parte das contas, foi utilizada a biblioteca pandas, com os seguintes comandos:
+
+```python
+media_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].mean()
+moda_estresse_nivel_academico = df_final.groupby('academic_stage')['stress'].apply(lambda x: x.mode()[0])
+mediana_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].median()
+variancia_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].var()
+desvio_padrao_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].std()
+amplitude_estresse_nivel_academico = ( df_final.groupby('academic_stage')[['stress']].max() - df_final.groupby('academic_stage')[['stress']].min() )
+
+```
