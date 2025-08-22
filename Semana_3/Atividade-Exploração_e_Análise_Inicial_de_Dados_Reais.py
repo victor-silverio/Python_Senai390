@@ -335,3 +335,5 @@ plt.clf()
 # Objetivo: Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse
 # Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variável escalar (Inteira, de 1 a 3), pois só há 3 variações.
 # Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram nivéis de estresse maiores. 
+
+# To cansado, vou parar por aqui nesse momento, assim que eu acordar eu termino essa ultima analise e o relatório. 
