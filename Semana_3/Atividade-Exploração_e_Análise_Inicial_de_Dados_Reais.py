@@ -96,6 +96,7 @@ Observações:
 '''
 # Bibliotecas
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Seção 1:
 # Seção de Importação Inicial
@@ -113,7 +114,6 @@ print("\n", "---"*15, "\n")
 # Seção 3:
 # Análise Preliminar:
 
-print("\n", "---"*15, "\n")
 print(df.info())
 print("\n", "---"*15, "\n")
 
@@ -147,10 +147,12 @@ print(df_final.info())
 print("\n", "---"*15, "\n")
 
 # Seção 5:
+# Seção 5.1:
 # Análise 1:
 # 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
 # Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
+#Seção 5.1.1 - Analises de tendencia central e dispersão
 # Inicialmente, iremos realizar somente os calculos filtrados por niveis academicos:
 
 media_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].mean()
@@ -160,5 +162,39 @@ variancia_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress
 desvio_padrao_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].std()
 amplitude_estresse_nivel_academico = ( df_final.groupby('academic_stage')[['stress']].max() - df_final.groupby('academic_stage')[['stress']].min() )
 
-#imprimindo só pra testar
-print(f"{media_estresse_nivel_academico}, \n\n, {moda_estresse_nivel_academico}, \n\n, {mediana_estresse_nivel_academico}, \n\n, {variancia_estresse_nivel_academico}, \n\n, {desvio_padrao_estresse_nivel_academico}, \n\n, {amplitude_estresse_nivel_academico}")
+# Agora com os calculos realizados, vamos fazer uns graficos através do matplotlib. Inicialmente os de dispersão de dados via grafico de colunas de cada nivel academico, depois a media dos 3.
+
+#Seção 5.1.2 - Graficos por nivel academico
+
+#Seção 5.1.2.1 - HIGH-SCHOOL
+
+# Filtramos pelo ensino medio
+estresse_highschool = df_final[df_final['academic_stage'] == 'high school']['stress'].value_counts().sort_index()
+
+# Grafico
+plt.bar(estresse_highschool.index, estresse_highschool.values)
+
+#Embelezamento do grafico:
+plt.title("Distribuição do nível de estresse - Ensino Médio")
+plt.xlabel("Nivel de estresse relatado")
+plt.ylabel("Quantidade de estudantes")
+plt.grid(axis='y')
+plt.tight_layout()
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_ensino_medio.png') # Como vou fazer vários graficos, não da pra mostrar todos ao mesmo tempo, tenho que salvar um por um, depois vou só adicionar as imagens no relatório em markdown
+plt.clf() #Limpando para o proximo grafico
+
+#Seção 5.1.2.1 - undergraduate
+
+estresse_undergraduate = df_final[df_final['academic_stage'] == 'undergraduate']['stress'].value_counts().sort_index()
+
+# Grafico
+plt.bar(estresse_undergraduate.index, estresse_undergraduate.values)
+
+#Embelezamento do grafico:
+plt.title("Distribuição do nível de estresse - Graduação")
+plt.xlabel("Nivel de estresse relatado")
+plt.ylabel("Quantidade de estudantes")
+plt.grid(axis='y')
+plt.tight_layout()
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_graduação.png')
+
