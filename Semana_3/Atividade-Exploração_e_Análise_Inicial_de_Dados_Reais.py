@@ -69,9 +69,9 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         (Para facilitar minha vida, vou manter em inglês)
     3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
         
-5. Análise dos dados (❌)
+5. Análise dos dados (❌~✅)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
-        1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (❌)
+        1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (✅)
             Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
         
         2. Avaliar se o stress academico relatado tem relação com a competição academica relatada. (❌)
