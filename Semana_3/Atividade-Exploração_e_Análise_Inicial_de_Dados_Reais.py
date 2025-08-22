@@ -150,7 +150,7 @@ print("\n", "---"*15, "\n")
 # Seção 5:
 # Seção 5.1:
 # Análise 1:
-# 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
+# Objetivo: Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
 # Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
 # Seção 5.1.1 - Analises de tendencia central e dispersão
@@ -238,7 +238,7 @@ plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_pos_
 plt.clf()
 
 # Seção 5.1.3.1 - Grafico geral dos 3 niveis academicos
-media_estresse_niveis = df_final.groupby('academic_stage')['stress'].mean().sort_values(ascending=False)
+media_estresse_niveis = df_final.groupby('academic_stage')['stress'].mean().sort_values(ascending=True)
 
 '''
 
@@ -259,7 +259,7 @@ plt.tight_layout()
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\media_estresse_niveis.png')
 plt.clf()
 
-# Seção 5.1.3.1.2 - Grafico sem zoom
+# Seção 5.1.3.1.2 - Grafico com zoom
 plt.bar(media_estresse_niveis.index, media_estresse_niveis.values)
 
 #Embelezamento do grafico:
@@ -268,7 +268,12 @@ plt.xlabel("Estagio Academico")
 plt.ylabel("Média de estresse")
 plt.grid(axis='y')
 plt.ylim(3, 4)
-plt.yticks([3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0])
+plt.yticks([3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0])
 plt.tight_layout() 
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\media_estresse_niveis_zoom.png')
 plt.clf()
+
+# Seção 5.2:
+# Análise 2:
+# Objetivo: Avaliar se o stress academico relatado tem relação com a competição academica relatada. (❌)
+# Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
