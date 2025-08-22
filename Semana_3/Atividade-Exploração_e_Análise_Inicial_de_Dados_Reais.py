@@ -291,5 +291,38 @@ plt.clf()
 
 # Seção 5.2:
 # Análise 2:
-# Objetivo: Avaliar se o stress academico relatado tem relação com a competição academica relatada. (❌)
+# Objetivo: Avaliar se o stress academico relatado tem relação com a competição academica relatada.
 # Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
+# Explicações do motivo dos graficos abaixo:
+#   Ao utilizar o grafico de dispersão padrão, a visualização era ruim, pois, devido a muitos pontos se sobreporem, não era possivel uma optima visualização dos dados e a busca de uma correlação.
+#   Para encontrar uma maneira de visualização ótima, pesquisei e testei várias plotagens de graficos, e após muitos testes acabei escolhendo um "heat map", com o kde do seaborn, junto á um grafico de dispersão do matplotlib com alguns parametros modificados. Junto á uma personalização para melhor visualização e visual mais agradavel. 
+#   Abaixo, vou explicar o porque de cada coisa, e oque significa cada parametro. (Isto é, para eu justificar o uso de cada parametro)
+
+import seaborn as sns
+
+sns.kdeplot(
+    x=df_final['academic_competition'],
+    y=df_final['stress'],
+    fill=True,
+    cmap="Blues",
+    alpha=0.5,
+    levels=10,
+    zorder=1
+)
+plt.scatter(
+    x=df_final['academic_competition'],
+    y=df_final['stress'],
+    color='black',
+    alpha=0.3,
+    zorder=3
+)
+
+plt.title('Relação entre Estresse e Competição Acadêmica')
+plt.xlabel('Nível de Competição Relatado')
+plt.ylabel('Nível de Estresse Relatado')
+plt.grid(zorder=0)
+plt.xticks([0, 1, 2, 3, 4, 5, 6])
+plt.yticks([0, 1, 2, 3, 4, 5, 6])
+plt.tight_layout()
+
+plt.show()
