@@ -334,5 +334,22 @@ plt.title("Média de estresse por ambiente de estudo")
 plt.xlabel("Ambiente de estudo")
 plt.ylabel("Média do nível de estresse")
 plt.ylim(0, 5)
-plt.tight_layout()
+plt.yticks([0, 1, 2, 3, 3.5, 4, 5])
+plt.grid(axis='y')
+plt.tight_layout() 
 plt.savefig(r'Semana_3\barplot_estresse_ambiente_final.png')
+plt.clf()
+
+# Segundo Gráfico, com boxplot, para demonstrar a amplitude dos dados, e a concentração, em cada um dos ambientes disponivéis
+
+sns.boxplot(x='study_environment', y='stress', data=df_final, order=['Peaceful', 'Noisy', 'disrupted'])
+plt.title('Distribuição do nivel de estresse por ambiente de estudo')
+plt.xlabel('Ambiente de estudo')
+plt.ylabel('Nível de estresse relatado')
+plt.grid(axis='y')
+plt.tight_layout() 
+plt.savefig(r'Semana_3\boxplot_estresse_por_ambiente.png')
+plt.clf()
+
+# Fim do código!
+#Todos os arquivos e outputs gerados estarão disponíveis no jupyter notebook em mesma pasta, além de serem comentados no relatorio.md
