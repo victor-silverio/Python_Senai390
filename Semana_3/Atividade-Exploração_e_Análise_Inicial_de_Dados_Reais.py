@@ -68,9 +68,7 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
     2. Além disso, notei que os nomes das colunas apresentam espaços, aspas, e outras incongruências e são grandes demais, para melhorar isso, irei renomear as colunas. (✅)
         (Para facilitar minha vida, vou manter em inglês)
     3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
-    4. Realizar a conversão de valores na coluna "study_environment" de valores textuais (objects) para valores numéricos (int). (✅)
-        Motivo: O texto que define o ambiente de estudos impede a criação de um gráfico de dispersão, que irei realizar na analise 3, então para isso irei converter para uma escala de 1 a 3, representando 1 o ambiente Peaceful, 2 o ambiente Noisy e 3 o ambiente disrupted.
-        
+         
 5. Análise dos dados (EM ANDAMENTO)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
         1. Avaliar nível de estresse acadêmico relatado, por nível acadêmico, através de análise analítica (✅)
@@ -144,16 +142,6 @@ df_tratado_1 = df_tratado.rename(columns={ # Renomeia colunas
     'Rate your academic stress index ': 'stress' # Em uso
     #'': '',
 })
-
-# Trocando os valores textuais (object), para valores numéricos:
-
-mapeamento_novo_ambiente = {
-    'Peaceful': 1,
-    'Noisy': 2,
-    'disrupted': 3   
-}
-
-df_tratado_1['study_environment'] = df_tratado_1['study_environment'].map(mapeamento_novo_ambiente)
 
 # Removendo as colunas inutilizadas na minha analise.
 
@@ -333,7 +321,18 @@ plt.clf()
 # Seção 5.3:
 # Análise 3:
 # Objetivo: Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse
-# Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variável escalar (Inteira, de 1 a 3), pois só há 3 variações. (Realizado no tratamendo de dados)
 # Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram nivéis de estresse maiores. 
 
+media_estresse_ambiente = df_final.groupby('study_environment')['stress'].mean().reset_index() # Fiz a média por ambiente de estudo
 
+# Usei o seamborn por ser mais simples nesse caso de uso
+
+sns.barplot(x='study_environment', y='stress', data=media_estresse_ambiente, order=['Peaceful', 'Noisy', 'disrupted'])
+
+# Embelezamento
+plt.title("Média de estresse por ambiente de estudo")
+plt.xlabel("Ambiente de estudo")
+plt.ylabel("Média do nível de estresse")
+plt.ylim(0, 5)
+plt.tight_layout()
+plt.savefig(r'Semana_3\barplot_estresse_ambiente_final.png')
