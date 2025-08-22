@@ -82,12 +82,14 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
 
 Emojis: ✅ & ❌
 -----------------------------------
+Observações:
 
 * Desculpe pela demora na entrega prof, estive ocupado essa semana pelas aulas.
 
 * To tentando mudar a minha organização de código para scripts maiores, essa vai ser a minha primeira vez fazendo isso em python, então pode ficar meio cheio de comentarios.
 
-*
+* Se tiver faltando acentos nas palavras é porque o vscode não corrige acentuação ainda (eu não tenho uma extensão para isso, nem sei se existe)
+
 '''
 # Bibliotecas
 import pandas as pd
