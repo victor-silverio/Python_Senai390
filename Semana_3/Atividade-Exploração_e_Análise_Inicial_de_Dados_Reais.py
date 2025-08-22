@@ -63,9 +63,11 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
 3. Avaliar informações e variações (✅)
     Através do comando "df.info", pude notar que há uma inconsistencia nos dados (Em somente uma linha). Então para isso, irei deletar ela para uma maior uniformidade.
     
-4. Tratamento dos dados (✅) 
-    Apaguei o registro incompleto para uniformidade de dados, usando o "df.dropna", e ficando com 139 registros integros
-    
+4. Tratamento dos dados (✅)
+    1. Apaguei o registro incompleto para uniformidade de dados, usando o "df.dropna", e ficando com 139 registros integros.
+    2. Além disso, notei que os nomes das colunas apresentam espaços e são grandes demais, para melhorar isso, irei renomear as colunas. (Para facilitar minha vida, vou manter em inglês)
+    3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm)
+        
 5. Análise dos dados (❌)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
         1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (❌)
@@ -118,6 +120,13 @@ print("\n", "---"*15, "\n")
 # Tratamento dos dados:
 
 df_tratado = df.dropna()
+df_tratado_1 = df_tratado.rename(colums={
+    'Your Academic Stage': 'academic_stage',
+    'Peer pressure': 'pressure_schoolmates',
+    ''
+    
+    
+})
 
 # Confirmação do tratamento:
 
@@ -125,4 +134,9 @@ print("\n", "---"*15, "\n")
 print(df_tratado.info())
 print("\n", "---"*15, "\n")
 
+# Seção 5:
+# Análise 1:
+# 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
+# Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
+media_estresse_ensino_medio = df_tratado.groupby('')
