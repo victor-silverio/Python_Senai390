@@ -208,7 +208,7 @@ plt.ylabel("Quantidade de estudantes")
 plt.grid(axis='y') # Aqui mostro a linha do grid no eixo y para melhor visualização do gráfico
 plt.xticks([0, 1, 2, 3, 4, 5]) # Aqui defino a separação do eixo x; Não da pra definir um único para o y pois os a qtd de dados variam pelo nível acadêmico, mas a escala no eixo x sempre é a mesma. obs: não há nenhum dado com valor 0, porém, listei ele para ficar mais bonito o grafico.
 plt.tight_layout()
-plt.savefig(r'Semana_3\distribuicao_estresse_ensino_medio.png') # Como vou fazer vários gráficos, não da pra mostrar todos ao mesmo tempo, tenho que salvar um por um, depois vou só adicionar as imagens no relatório em markdown
+plt.savefig(r'Semana_3\graficos\distribuicao_estresse_ensino_medio.png') # Como vou fazer vários gráficos, não da pra mostrar todos ao mesmo tempo, tenho que salvar um por um, depois vou só adicionar as imagens no relatório em markdown
 plt.clf() #Limpando para o proximo gráfico
 
 # Seção 5.1.2.2 - undergraduate
@@ -225,7 +225,7 @@ plt.ylabel("Quantidade de estudantes")
 plt.grid(axis='y')
 plt.xticks([0, 1, 2, 3, 4, 5])
 plt.tight_layout()
-plt.savefig(r'Semana_3\distribuicao_estresse_graduação.png')
+plt.savefig(r'Semana_3\graficos\distribuicao_estresse_graduação.png')
 plt.clf()
 
 # Seção 5.1.2.3 - post-graduate
@@ -242,7 +242,7 @@ plt.ylabel("Quantidade de estudantes")
 plt.grid(axis='y')
 plt.xticks([0, 1, 2, 3, 4, 5])
 plt.tight_layout() 
-plt.savefig(r'Semana_3\distribuicao_estresse_pos_graduação.png')
+plt.savefig(r'Semana_3\graficos\distribuicao_estresse_pos_graduação.png')
 plt.clf()
 
 # Seção 5.1.3.1 - Gráfico geral dos 3 níveis acadêmicos
@@ -264,7 +264,7 @@ plt.ylabel("Média de estresse")
 plt.grid(axis='y')
 plt.ylim(0, 5)
 plt.tight_layout() 
-plt.savefig(r'Semana_3\media_estresse_niveis.png')
+plt.savefig(r'Semana_3\graficos\media_estresse_niveis.png')
 plt.clf()
 
 # Seção 5.1.3.1.2 - Gráfico com zoom
@@ -278,7 +278,7 @@ plt.grid(axis='y')
 plt.ylim(3, 4)
 plt.yticks([3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0])
 plt.tight_layout() 
-plt.savefig(r'Semana_3\media_estresse_niveis_zoom.png')
+plt.savefig(r'Semana_3\graficos\media_estresse_niveis_zoom.png')
 plt.clf()
 
 # Seção 5.2:
@@ -315,7 +315,7 @@ plt.grid(zorder=0) #Defino a camada que o grid aparece
 plt.xticks([0, 1, 2, 3, 4, 5, 6]) # Os dados são de 1 a 5, mas para que a visualização fique mais centralizada no gráfico, coloquei uma posição a mais de ambos os lados
 plt.yticks([0, 1, 2, 3, 4, 5, 6])
 plt.tight_layout() #Ajusta o layout automaticamente
-plt.savefig(r'Semana_3\dispersao_estresse_competitividade.png')
+plt.savefig(r'Semana_3\graficos\dispersao_estresse_competitividade.png')
 plt.clf()
 
 # Seção 5.3:
@@ -337,7 +337,7 @@ plt.ylim(0, 5)
 plt.yticks([0, 1, 2, 3, 3.5, 4, 5])
 plt.grid(axis='y')
 plt.tight_layout() 
-plt.savefig(r'Semana_3\barplot_estresse_ambiente_final.png')
+plt.savefig(r'Semana_3\graficos\barplot_estresse_ambiente_final.png')
 plt.clf()
 
 # Segundo Gráfico, com boxplot, para demonstrar a amplitude dos dados, e a concentração, em cada um dos ambientes disponivéis
@@ -348,7 +348,7 @@ plt.xlabel('Ambiente de estudo')
 plt.ylabel('Nível de estresse relatado')
 plt.grid(axis='y')
 plt.tight_layout() 
-plt.savefig(r'Semana_3\boxplot_estresse_por_ambiente.png')
+plt.savefig(r'Semana_3\graficos\boxplot_estresse_por_ambiente.png')
 plt.clf()
 
 # Fim do código!
