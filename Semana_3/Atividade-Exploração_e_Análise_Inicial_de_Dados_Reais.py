@@ -55,7 +55,7 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
 --- Plano de Ação --- 
 
 1. Carregar Arquivos (✅)
-    Baixei através de outro script e minha apikey, o scrip está disponível na mesma pasta nomeado como "Download.py", mas, para sua execução é necessário uma apikey valida.
+    Baixei através de outro script e minha apikey, o script está disponível na mesma pasta nomeado como "Download.py".
 
 2. Visualização inicial dos dados (✅)
     Usei o "df.head"
@@ -69,7 +69,7 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         (Para facilitar minha vida, vou manter em inglês)
     3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
          
-5. Análise dos dados (EM ANDAMENTO)
+5. Análise dos dados (✅)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
         1. Avaliar nível de estresse acadêmico relatado, por nível acadêmico, através de análise analítica (✅)
             Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível acadêmico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
@@ -77,9 +77,8 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         2. Avaliar se o stress acadêmico relatado tem relação com a competição acadêmica relatada. (✅)
             Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
             
-        3. Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse (❌)
-            Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variável escalar (Inteira, de 1 a 3), pois só há 3 variações. (✅ - Realizado no tratamento de dados)
-            Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram níveis de estresse maiores. 
+        3. Avaliar se o ambiente de estudo é diretamente relatado ao nível de estresse (✅)
+            Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacíficos são ligados á estresses relatados como baixo, e se, ambientes ruins geram níveis de estresse maiores. 
 
     Com essas 3 abordagens, espero trazer uma ampla visão do dataset, abordando ele de diversas maneiras.
 
