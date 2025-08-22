@@ -64,9 +64,10 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
     Através do comando "df.info", pude notar que há uma inconsistencia nos dados (Em somente uma linha). Então para isso, irei deletar ela para uma maior uniformidade.
     
 4. Tratamento dos dados (✅)
-    1. Apaguei o registro incompleto para uniformidade de dados, usando o "df.dropna", e ficando com 139 registros integros.
-    2. Além disso, notei que os nomes das colunas apresentam espaços e são grandes demais, para melhorar isso, irei renomear as colunas. (Para facilitar minha vida, vou manter em inglês)
-    3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm)
+    1. Apaguei o registro incompleto para uniformidade de dados, usando o "df.dropna", e ficando com 139 registros integros. (✅)
+    2. Além disso, notei que os nomes das colunas apresentam espaços, aspas, e outras incongruencias e são grandes demais, para melhorar isso, irei renomear as colunas. (✅)
+        (Para facilitar minha vida, vou manter em inglês)
+    3. Irei excluir as colunas inutilizadas para as minhas analises. (De certa forma é economia de recursos, mas, na escala atual é só para melhor organização msm) (✅)
         
 5. Análise dos dados (❌)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
@@ -119,24 +120,92 @@ print("\n", "---"*15, "\n")
 # Seção 4:
 # Tratamento dos dados:
 
-df_tratado = df.dropna()
-df_tratado_1 = df_tratado.rename(colums={
-    'Your Academic Stage': 'academic_stage',
-    'Peer pressure': 'pressure_schoolmates',
-    ''
-    
-    
+df_tratado = df.dropna() # Limpa valores nulos
+
+df_tratado_1 = df_tratado.rename(columns={ # Renomeia colunas
+
+    'Timestamp': 'timestamp',
+    'Your Academic Stage': 'academic_stage', # Em uso
+    'Peer pressure': 'pressure_schoolmates', 
+    'Academic pressure from your home': 'pressure_family',
+    'Study Environment': 'study_environment', # Em uso
+    'What coping strategy you use as a student?': 'coping_strategy', 
+    'Do you have any bad habits like smoking, drinking on a daily basis?': 'bad_habits',
+    'What would you rate the academic  competition in your student life': 'academic_competition', # Em uso
+    'Rate your academic stress index ': 'stress' # Em uso
+    #'': '',
 })
+
+# Removendo as colunas inutilizadas na minha analise.
+
+df_final = df_tratado_1.drop(['timestamp', 'pressure_schoolmates', 'pressure_family', 'coping_strategy', 'bad_habits'], axis=1)
 
 # Confirmação do tratamento:
 
 print("\n", "---"*15, "\n")
-print(df_tratado.info())
+print(df_final.info())
 print("\n", "---"*15, "\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Seção 5:
 # Análise 1:
 # 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
 # Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
-media_estresse_ensino_medio = df_tratado.groupby('')
+#media_estresse_ensino_medio = df_tratado.groupby('')
