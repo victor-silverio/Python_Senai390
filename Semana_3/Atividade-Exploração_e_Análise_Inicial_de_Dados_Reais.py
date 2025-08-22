@@ -29,7 +29,7 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         Noisy
         Peaceful
         disrupted
-        *há 1 valor em branco
+        *há 1 valor em branco (Necessita de tratamento)
 
 6. What coping strategy you use as a student?
     Armazena o relato do estudante de como lida com o estresse, variando de:
@@ -68,37 +68,52 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
     
 5. Análise dos dados (❌)
     Como o meu dataset escolhido tem várias colunas, para uma melhor precisão irei focar em 3 visualizações dos dados, sendo elas:
-        1. Avaliar nivel de estresse, por nivel, através de análise analitica
+        1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (❌)
+            Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
         
+        2. Avaliar se o stress academico relatado tem relação com a competição academica relatada. (❌)
+            Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
+            
+        3. Avaliar se o ambiente de estudo é diretamente relatado ao nivel de estresse (❌)
+            Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variavel escalar (Inteira, de 1 a 3), pois só há 3 variações.
+            Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacificos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram nivéis de estresse maiores. 
+
+    Com essas 3 abordagens, espero trazer uma ampla visão do dataset, abordando ele de diversas maneiras.
 
 Emojis: ✅ & ❌
 -----------------------------------
 
 * Desculpe pela demora na entrega prof, estive ocupado essa semana pelas aulas.
 
+* To tentando mudar a minha organização de código para scripts maiores, essa vai ser a minha primeira vez fazendo isso em python, então pode ficar meio cheio de comentarios.
+
+*
 '''
 # Bibliotecas
 import pandas as pd
 
+# Seção 1:
 # Seção de Importação Inicial
 
 path = r'C:\Users\victo\Python_Senai390\Semana_3\academic_stress_level-maintainance_1.csv'
 df = pd.read_csv(path)
 
+# Seção 2:
 # Visualização inicial dos dados:
 
 print("\n", "---"*15, "\n")
 print(df.head())
 print("\n", "---"*15, "\n")
 
-
-# Seção de Análise Preliminar:
+# Seção 3:
+# Análise Preliminar:
 
 print("\n", "---"*15, "\n")
 print(df.info())
 print("\n", "---"*15, "\n")
 
-# Seção Tratamento dos dados:
+# Seção 4:
+# Tratamento dos dados:
 
 df_tratado = df.dropna()
 
