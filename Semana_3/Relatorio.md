@@ -291,3 +291,57 @@ Devido a diferença da média entre os 3 ser pequena, fiz um 2° gráfico, que e
 
 > Como mostrado pelas análises de tendencias centrais, o maior estresse relatado está presente no ensino médio.
 
+---
+
+### Análise 2
+
+> Relação entre o nível de competição acadêmica e o nível de estresse.
+
+---
+
+* Objetivo: Avaliar se o stress acadêmico relatado tem relação com a competição acadêmica relatada.
+* Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
+
+* Explicações do motivo dos gráficos abaixo:
+> Ao utilizar o gráfico de dispersão padrão, a visualização era ruim, pois, devido a muitos pontos se sobreporem, não era possível uma optima visualização dos dados e a busca de uma correlação.
+> Para encontrar uma maneira de visualização ótima, pesquisei e testei várias plotagens de gráficos, e após muitos testes acabei escolhendo um "heat map", com o kde do seaborn, junto á um gráfico de dispersão do matplotlib com alguns parâmetros modificados. Junto á uma personalização para melhor visualização e visual mais agradável. 
+
+Abaixo, vou explicar o porque de cada coisa, e oque significa cada parâmetro. (Isto é, para eu justificar o uso de cada parâmetro)
+
+
+```python
+sns.kdeplot( # O kde plot faz uma plotagem do que se parece um mapa de altitude, utilizei esse no cenário atual como um "heat map" de onde tinha mais frequência de dados.
+    x=df_final['academic_competition'], #Seleciona o eixo X como a escala de competição acadêmica
+    y=df_final['stress'], #Seleciona o eixo y como a escala de estresse relatado
+    fill=True, #Preenche os campos, para não ficar só o contorno
+    cmap="Blues", #Um estilo que achei adequado, e bonito
+    alpha=0.5, #Define a transparência (Para que a sobreposição fique mais mesclada)
+    levels=10, # Define a "qualidade" do gráfico, após testes, 10 é o suficiente para uma boa visualização
+    zorder=1 # Define a posição do gráfico (em profundidade). Dividi em 3 levels, 0, 1, e 2)
+)
+plt.scatter(
+    x=df_final['academic_competition'], #Mesma coisa do de cima
+    y=df_final['stress'],
+    color='black', # Escolhi a cor preta para uma melhor visualização
+    alpha=0.3, # Novamente, a transparência para uma melhor visualização da concentração de dados
+    zorder=2 # Posição entre as camadas de profundidades já previamente definidas
+)
+
+# Embelezamento
+plt.title('Relação entre Estresse e Competição Acadêmica') #Defino os Títulos
+plt.xlabel('Nível de Competição Relatado')
+plt.ylabel('Nível de Estresse Relatado')
+plt.grid(zorder=0) #Defino a camada que o grid aparece
+plt.xticks([0, 1, 2, 3, 4, 5, 6]) # Os dados são de 1 a 5, mas para que a visualização fique mais centralizada no gráfico, coloquei uma posição a mais de ambos os lados
+plt.yticks([0, 1, 2, 3, 4, 5, 6])
+plt.tight_layout() #Ajusta o layout automaticamente
+plt.savefig(r'Semana_3\graficos\dispersao_estresse_competitividade.png')
+plt.clf()
+
+```
+
+#### Gráfico:
+
+![Grafico](https://github.com/victor-silverio/Python_Senai390/blob/4aa366b5e293b2458bd289b43c38897160d663cf/Semana_3/graficos/dispersao_estresse_competitividade.png)
+
+> Ao visualizar o gráfico, podemos notar que há uma pequena tendencia, de que o nível de competição acadêmica relatado tenha relação ao estresse, porém como a faixa de dados é pequena (Somente 139 registros), não podemos concluir que há uma relação direta. 
