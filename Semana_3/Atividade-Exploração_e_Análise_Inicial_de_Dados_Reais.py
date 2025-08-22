@@ -154,4 +154,11 @@ print("\n", "---"*15, "\n")
 # Inicialmente, iremos realizar somente os calculos filtrados por niveis academicos:
 
 media_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].mean()
-print(media_estresse_nivel_academico)
+moda_estresse_nivel_academico = df_final.groupby('academic_stage')['stress'].apply(lambda x: x.mode()[0])
+mediana_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].median()
+variancia_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].var()
+desvio_padrao_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].std()
+amplitude_estresse_nivel_academico = ( df_final.groupby('academic_stage')[['stress']].max() - df_final.groupby('academic_stage')[['stress']].min() )
+
+#imprimindo só pra testar
+print(f"{media_estresse_nivel_academico}, \n\n, {moda_estresse_nivel_academico}, \n\n, {mediana_estresse_nivel_academico}, \n\n, {variancia_estresse_nivel_academico}, \n\n, {desvio_padrao_estresse_nivel_academico}, \n\n, {amplitude_estresse_nivel_academico}")
