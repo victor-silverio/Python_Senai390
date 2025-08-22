@@ -97,10 +97,14 @@ Observações:
 
 * Talvez eu tenha excedido o conteudo e o nível ensinado em sala de aula até o momento, pois aprendi algumas manipulações novas e outras maneiras de se analisar um conjunto de dados por conta própria. 
 
+* Programei todo o código como uma analise pontual do dataset, então, ele segue uma sequencia de funcionamento direta, sem "retornos" ou "avanços"
+
 '''
 # Bibliotecas
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # Seção 1:
 # Seção de Importação Inicial
@@ -298,31 +302,31 @@ plt.clf()
 #   Para encontrar uma maneira de visualização ótima, pesquisei e testei várias plotagens de graficos, e após muitos testes acabei escolhendo um "heat map", com o kde do seaborn, junto á um grafico de dispersão do matplotlib com alguns parametros modificados. Junto á uma personalização para melhor visualização e visual mais agradavel. 
 #   Abaixo, vou explicar o porque de cada coisa, e oque significa cada parametro. (Isto é, para eu justificar o uso de cada parametro)
 
-import seaborn as sns
-
-sns.kdeplot(
-    x=df_final['academic_competition'],
-    y=df_final['stress'],
-    fill=True,
-    cmap="Blues",
-    alpha=0.5,
-    levels=10,
-    zorder=1
+sns.kdeplot( # O kde plot faz uma plotagem do que se parece um mapa de altitude, utilizei esse no cenario atual como um "heat map" de onde tinha mais frequencia de dados.
+    x=df_final['academic_competition'], #Seleciona o eixo X como a escala de competição academica
+    y=df_final['stress'], #Seleciona o eixo y como a escala de estresse relatado
+    fill=True, #Preenche os campos, para não ficar só o contorno
+    cmap="Blues", #Um estilo que achei adequado, e bonito
+    alpha=0.5, #Define a transparencia (Para que a sobreposição fique mais mesclada)
+    levels=10, # Define a "qualidade" do grafico, após testes, 10 é o suficiente para uma boa visualização
+    zorder=1 # Define a posição do grafico (em profundidade). Dividi em 3 levels, 0, 1, e 2)
 )
 plt.scatter(
-    x=df_final['academic_competition'],
+    x=df_final['academic_competition'], #Mesma coisa do de cima
     y=df_final['stress'],
-    color='black',
-    alpha=0.3,
-    zorder=3
+    color='black', # Escolhi a cor preta para uma melhor visualização
+    alpha=0.3, # Novamente, a transparencia para uma melhor visualização da concentração de dados
+    zorder=2 # Posição entre as camadas de profundidades já previamente definidas
 )
 
-plt.title('Relação entre Estresse e Competição Acadêmica')
+# Embelezamento
+plt.title('Relação entre Estresse e Competição Acadêmica') #Defino os Titulos
 plt.xlabel('Nível de Competição Relatado')
 plt.ylabel('Nível de Estresse Relatado')
-plt.grid(zorder=0)
-plt.xticks([0, 1, 2, 3, 4, 5, 6])
+plt.grid(zorder=0) #Defino a camada que o grid aparece
+plt.xticks([0, 1, 2, 3, 4, 5, 6]) # Os dados são de 1 a 5, mas para que a visualização fique mais centralizada no grafico, coloquei uma posição a mais de ambos os lados
 plt.yticks([0, 1, 2, 3, 4, 5, 6])
-plt.tight_layout()
+plt.tight_layout() #Ajusta o layout automaticamente
 
-plt.show()
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\dispersao_estresse_competitividade.png')
+plt.clf()
