@@ -39,6 +39,10 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 3. Atividade - Analisando o famoso dataset Iris [Arquivo .py](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.py) [Notebook jupyter](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.ipynb)
 
 ## Semana 3:
+* Pasta da semana 3: [Pasta](Semana_3)
+
+1. Atividade - Exploração e Análise Inicial de Dados Reais [Script.py](Semana_3/Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.py)
+2. Relatório - [Markdown](Semana_3/Relatorio.md)
 
 ## Semana 4:
 
