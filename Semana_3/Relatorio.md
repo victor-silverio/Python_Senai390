@@ -272,3 +272,11 @@ Inicialmente, temos 3 gráficos, mostrando o nivel de estresse relatado por est�
 ![Ensino Médio](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_ensino_medio.png) 
 ![Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_gradua%C3%A7%C3%A3o.png)
 ![Pós Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_pos_gradua%C3%A7%C3%A3o.png) 
+
+E o gráfico mostrando a média entre os 3 estágios, que pode ser visualizado em 2 versões, a na escala normal:
+
+![Geral](https://github.com/victor-silverio/Python_Senai390/blob/f8fb594e83f2600c56c94cd12b117a75a8adefe1/Semana_3/graficos/media_estresse_niveis.png)
+
+E uma com uma escala menor, facilitando a visualização da diferença entre os 3. 
+
+[Geral - Zoom](https://github.com/victor-silverio/Python_Senai390/blob/f8fb594e83f2600c56c94cd12b117a75a8adefe1/Semana_3/graficos/media_estresse_niveis_zoom.png)
