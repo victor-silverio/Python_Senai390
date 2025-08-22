@@ -208,3 +208,47 @@ desvio_padrao_estresse_nivel_academico = df_final.groupby('academic_stage')[['st
 amplitude_estresse_nivel_academico = ( df_final.groupby('academic_stage')[['stress']].max() - df_final.groupby('academic_stage')[['stress']].min() )
 
 ```
+
+#### Resultados:
+
+Os resultados de tendência central e dispersão do nível de estresse por estágio acadêmico foram:
+
+**Medidas de Tendência Central**
+
+* **Média:**
+    * Ensino Médio: 3.827586
+    * Pós-graduação: 3.727273
+    * Graduação: 3.686869
+
+* **Moda:**
+    * Ensino Médio: 4
+    * Pós-graduação: 4
+    * Graduação: 4
+
+* **Mediana:**
+    * Ensino Médio: 4.0
+    * Pós-graduação: 4.0
+    * Graduação: 4.0
+
+---
+
+**Medidas de Dispersão**
+
+* **Variância:**
+    * Ensino Médio: 1.290640
+    * Pós-graduação: 0.418182
+    * Graduação: 1.094826
+
+* **Desvio Padrão:**
+    * Ensino Médio: 1.136064
+    * Pós-graduação: 0.646670
+    * Graduação: 1.046339
+
+* **Amplitude:**
+    * Ensino Médio: 4
+    * Pós-graduação: 2
+    * Graduação: 4
+
+---
+
+## Comentários:
