@@ -344,4 +344,58 @@ plt.clf()
 
 ![Grafico](https://github.com/victor-silverio/Python_Senai390/blob/4aa366b5e293b2458bd289b43c38897160d663cf/Semana_3/graficos/dispersao_estresse_competitividade.png)
 
-> Ao visualizar o gráfico, podemos notar que há uma pequena tendencia, de que o nível de competição acadêmica relatado tenha relação ao estresse, porém como a faixa de dados é pequena (Somente 139 registros), não podemos concluir que há uma relação direta. 
+> Ao visualizar o gráfico, podemos notar que há uma pequena tendencia, de que o nível de competição acadêmica relatado tenha relação ao estresse, porém como a faixa de dados é pequena (somente 139 registros), não podemos concluir que há uma relação direta. 
+
+### Análise 3
+
+Na analise 3, busquei descobrir se há alguma relação entre o nivel relatado de estresse, com o ambiente de estudos relatado.
+
+Para isso, criei 2 graficos, sendo um de barras, e um boxplot, que permitiu uma boa visualização dos dados.
+
+O código utilizado foi:
+
+```python
+
+media_estresse_ambiente = df_final.groupby('study_environment')['stress'].mean().reset_index() # Fiz a média por ambiente de estudo
+
+# Usei o seamborn por ser mais simples nesse caso de uso
+
+sns.barplot(x='study_environment', y='stress', data=media_estresse_ambiente, order=['Peaceful', 'Noisy', 'disrupted'])
+
+# Embelezamento
+plt.title("Média de estresse por ambiente de estudo")
+plt.xlabel("Ambiente de estudo")
+plt.ylabel("Média do nível de estresse")
+plt.ylim(0, 5)
+plt.yticks([0, 1, 2, 3, 3.5, 4, 5])
+plt.grid(axis='y')
+plt.tight_layout() 
+plt.savefig(r'Semana_3\graficos\barplot_estresse_ambiente_final.png')
+plt.clf()
+
+# Segundo Gráfico, com boxplot, para demonstrar a amplitude dos dados, e a concentração, em cada um dos ambientes disponivéis
+
+sns.boxplot(x='study_environment', y='stress', data=df_final, order=['Peaceful', 'Noisy', 'disrupted'])
+plt.title('Distribuição do nivel de estresse por ambiente de estudo')
+plt.xlabel('Ambiente de estudo')
+plt.ylabel('Nível de estresse relatado')
+plt.grid(axis='y')
+plt.tight_layout() 
+plt.savefig(r'Semana_3\graficos\boxplot_estresse_por_ambiente.png')
+plt.clf()
+
+```
+
+#### Gráficos:
+
+E os graficos gerados foram:
+
+![Gráfico 1](https://github.com/victor-silverio/Python_Senai390/blob/aef3fdc1a88afd23f397cc2696f53c3b107f3e6d/Semana_3/graficos/barplot_estresse_ambiente_final.png)
+
+> Nessa visualização, podemos verificar claramente que o ambiente "Peaceful", ou seja, pacifíco, é o com menos estresse relatado. E o ambiente "disrupted", ou seja, interrompido, ou impedido, mostra um estresse maior.
+
+![Gráfico 2](https://github.com/victor-silverio/Python_Senai390/blob/aef3fdc1a88afd23f397cc2696f53c3b107f3e6d/Semana_3/graficos/boxplot_estresse_por_ambiente.png)
+
+> Aqui podemos ver claramente como o ambiente de estudos impacta o nível de estresse relatado, onde ambientes melhores possui o estresse concentrado em mais baixo, e o "pior" ambiente na escala do dataset, um estresse relatado maior. Ainda que, haja dados pontuais indicando pessoas com ambientes ruins, relatando estresse baixo. 
+
+# Fim, obrigado pela atenção.
