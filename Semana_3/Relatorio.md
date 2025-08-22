@@ -270,13 +270,24 @@ Como generalização, podemos notar que todos os estudantes relataram que a vida
 Inicialmente, temos 3 gráficos, mostrando o nivel de estresse relatado por estágio de ensino:
 
 ![Ensino Médio](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_ensino_medio.png) 
+
+> Aqui podemos visualizar que a maioria dos estudantes do ensino médio relatam um estresse de nível 4.
+
 ![Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_gradua%C3%A7%C3%A3o.png)
+
+> Aqui, assim como no ensino médio, a maioria dos estudantes relataram um estresse de nível 4.
+
 ![Pós Graduação](https://github.com/victor-silverio/Python_Senai390/blob/05c6828a62925e56d64865c4c644f662e36bdfce/Semana_3/graficos/distribuicao_estresse_pos_gradua%C3%A7%C3%A3o.png) 
+
+> Na pós graduação, o mesmo ocorreu, a maioria dos estudantes relataram o estresse como nível 4. 
 
 E o gráfico mostrando a média entre os 3 estágios, que pode ser visualizado em 2 versões, a na escala normal:
 
 ![Geral](https://github.com/victor-silverio/Python_Senai390/blob/f8fb594e83f2600c56c94cd12b117a75a8adefe1/Semana_3/graficos/media_estresse_niveis.png)
 
-E uma com uma escala menor, facilitando a visualização da diferença entre os 3. 
+Devido a diferença da média entre os 3 ser pequena, fiz um 2° gráfico, que exibe os dados em uma escala menor, e está disponível abaixo:
 
 ![Geral - Zoom](https://github.com/victor-silverio/Python_Senai390/blob/f8fb594e83f2600c56c94cd12b117a75a8adefe1/Semana_3/graficos/media_estresse_niveis_zoom.png)
+
+> Como mostrado pelas análises de tendencias centrais, o maior estresse relatado está presente no ensino médio.
+
