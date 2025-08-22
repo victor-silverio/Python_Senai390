@@ -114,6 +114,7 @@ print("\n", "---"*15, "\n")
 # Seção 3:
 # Análise Preliminar:
 
+print("\n", "---"*15, "\n")
 print(df.info())
 print("\n", "---"*15, "\n")
 
@@ -152,7 +153,7 @@ print("\n", "---"*15, "\n")
 # 1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica
 # Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
 
-#Seção 5.1.1 - Analises de tendencia central e dispersão
+# Seção 5.1.1 - Analises de tendencia central e dispersão
 # Inicialmente, iremos realizar somente os calculos filtrados por niveis academicos:
 
 media_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].mean()
@@ -162,11 +163,29 @@ variancia_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress
 desvio_padrao_estresse_nivel_academico = df_final.groupby('academic_stage')[['stress']].std()
 amplitude_estresse_nivel_academico = ( df_final.groupby('academic_stage')[['stress']].max() - df_final.groupby('academic_stage')[['stress']].min() )
 
+# Exibindo os dados:
+
+print("\n", "---"*15, "\n")
+print(f"A média de estresse por nível academico é: \n\n{media_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+print(f"A moda de estresse por nível academico é: \n\n{moda_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+print(f"A mediana de estresse por nível academico é: \n\n{mediana_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+print(f"A variancia de estresse por nível academico é: \n\n{variancia_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+print(f"O desvio padrão de estresse por nível academico é: \n\n{desvio_padrao_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+print(f"A amplitude de estresse por nível academico é: \n\n{amplitude_estresse_nivel_academico}")
+print("\n", "---"*15, "\n")
+
 # Agora com os calculos realizados, vamos fazer uns graficos através do matplotlib. Inicialmente os de dispersão de dados via grafico de colunas de cada nivel academico, depois a media dos 3.
 
-#Seção 5.1.2 - Graficos por nivel academico
+# Os demais dados serão tratados de forma escrita no relatório
 
-#Seção 5.1.2.1 - HIGH-SCHOOL
+# Seção 5.1.2 - Graficos por nivel academico
+
+# Seção 5.1.2.1 - HIGH-SCHOOL
 
 # Filtramos pelo ensino medio
 estresse_highschool = df_final[df_final['academic_stage'] == 'high school']['stress'].value_counts().sort_index()
@@ -184,7 +203,7 @@ plt.tight_layout()
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_ensino_medio.png') # Como vou fazer vários graficos, não da pra mostrar todos ao mesmo tempo, tenho que salvar um por um, depois vou só adicionar as imagens no relatório em markdown
 plt.clf() #Limpando para o proximo grafico
 
-#Seção 5.1.2.2 - undergraduate
+# Seção 5.1.2.2 - undergraduate
 
 estresse_undergraduate = df_final[df_final['academic_stage'] == 'undergraduate']['stress'].value_counts().sort_index()
 
@@ -201,7 +220,7 @@ plt.tight_layout()
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_graduação.png')
 plt.clf()
 
-#Seção 5.1.2.3 - post-graduate
+# Seção 5.1.2.3 - post-graduate
 
 estresse_postgraduate = df_final[df_final['academic_stage'] == 'post-graduate']['stress'].value_counts().sort_index()
 
@@ -216,4 +235,40 @@ plt.grid(axis='y')
 plt.xticks([0, 1, 2, 3, 4, 5])
 plt.tight_layout() 
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_pos_graduação.png')
+plt.clf()
+
+# Seção 5.1.3.1 - Grafico geral dos 3 niveis academicos
+media_estresse_niveis = df_final.groupby('academic_stage')['stress'].mean().sort_values(ascending=False)
+
+'''
+
+DEVIDO A MÉDIA ENTRE OS 3 SEREM PROXIMAS, UM GRAFICO NORMAL FICA DIFICIL A VISUALIZAÇÃO DA DIFERENÇA, POR ISSO FIZ UM "SEM ZOOM", E UM "COM ZOOM"
+
+'''
+
+# Seção 5.1.3.1.1 - Grafico sem zoom
+plt.bar(media_estresse_niveis.index, media_estresse_niveis.values)
+
+#Embelezamento do grafico:
+plt.title("Média de Nível de estresse por estágio academico")
+plt.xlabel("Estagio Academico")
+plt.ylabel("Média de estresse")
+plt.grid(axis='y')
+plt.ylim(0, 5)
+plt.tight_layout() 
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\media_estresse_niveis.png')
+plt.clf()
+
+# Seção 5.1.3.1.2 - Grafico sem zoom
+plt.bar(media_estresse_niveis.index, media_estresse_niveis.values)
+
+#Embelezamento do grafico:
+plt.title("Média de Nível de estresse por estágio academico")
+plt.xlabel("Estagio Academico")
+plt.ylabel("Média de estresse")
+plt.grid(axis='y')
+plt.ylim(3, 4)
+plt.yticks([3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0])
+plt.tight_layout() 
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\media_estresse_niveis_zoom.png')
 plt.clf()
