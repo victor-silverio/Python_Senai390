@@ -76,11 +76,11 @@ O dataset consiste em 9 colunas, e cada uma delas armazena um tipo de dado, send
         1. Avaliar nivel de estresse academico relatado, por nivel academico, através de análise análitica (✅)
             Saida esperada: Vou montar um gráfico de colunas sobre o nível de estresse relatado por cada nível academico e sua distribuição, e além disso um gráfico mostrando a média de cada área.
         
-        2. Avaliar se o stress academico relatado tem relação com a competição academica relatada. (❌)
+        2. Avaliar se o stress academico relatado tem relação com a competição academica relatada. (✅)
             Saida esperada: Vou montar um gráfico de dispersão para analisar se há alguma relação entre os 2
             
         3. Avaliar se o ambiente de estudo é diretamente relatado ao nivel de estresse (❌)
-            Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variavel escalar (Inteira, de 1 a 3), pois só há 3 variações.
+            Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variavel escalar (Inteira, de 1 a 3), pois só há 3 variações. (✅ - Realizado no tratamento de dados)
             Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacificos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram nivéis de estresse maiores. 
 
     Com essas 3 abordagens, espero trazer uma ampla visão do dataset, abordando ele de diversas maneiras.
@@ -327,6 +327,11 @@ plt.grid(zorder=0) #Defino a camada que o grid aparece
 plt.xticks([0, 1, 2, 3, 4, 5, 6]) # Os dados são de 1 a 5, mas para que a visualização fique mais centralizada no grafico, coloquei uma posição a mais de ambos os lados
 plt.yticks([0, 1, 2, 3, 4, 5, 6])
 plt.tight_layout() #Ajusta o layout automaticamente
-
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\dispersao_estresse_competitividade.png')
 plt.clf()
+
+# Seção 5.3:
+# Análise 3:
+# Objetivo: Avaliar se o ambiente de estudo é diretamente relatado ao nivel de estresse (❌)
+# Pré processamento: Para uma melhor avaliação, vou converter o ambiente de texto (object), para um variavel escalar (Inteira, de 1 a 3), pois só há 3 variações.
+# Saida esperado: Através disso, quero descobrir se, ambientes relatados como pacificos são ligados á estresses relatados como baixo (1 ou 2, na escala), e se, ambientes ruins geram nivéis de estresse maiores. 
