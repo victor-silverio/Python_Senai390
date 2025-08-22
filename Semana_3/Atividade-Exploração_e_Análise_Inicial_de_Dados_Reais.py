@@ -178,12 +178,13 @@ plt.bar(estresse_highschool.index, estresse_highschool.values)
 plt.title("Distribuição do nível de estresse - Ensino Médio")
 plt.xlabel("Nivel de estresse relatado")
 plt.ylabel("Quantidade de estudantes")
-plt.grid(axis='y')
+plt.grid(axis='y') # Aqui mostro a linha do grid no eixo y para melhor visualizacao do grafico
+plt.xticks([0, 1, 2, 3, 4, 5]) # Aqui defino a separação do eixo x; Não da pra definir um unico para o y pois os a qtd de dados variam pelo nivel academico, mas a escala no eixo x sempre é a mesma. obs: não há nenhum dado com valor 0, porém, listei ele para ficar mais bonito o grafico.
 plt.tight_layout()
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_ensino_medio.png') # Como vou fazer vários graficos, não da pra mostrar todos ao mesmo tempo, tenho que salvar um por um, depois vou só adicionar as imagens no relatório em markdown
 plt.clf() #Limpando para o proximo grafico
 
-#Seção 5.1.2.1 - undergraduate
+#Seção 5.1.2.2 - undergraduate
 
 estresse_undergraduate = df_final[df_final['academic_stage'] == 'undergraduate']['stress'].value_counts().sort_index()
 
@@ -195,6 +196,24 @@ plt.title("Distribuição do nível de estresse - Graduação")
 plt.xlabel("Nivel de estresse relatado")
 plt.ylabel("Quantidade de estudantes")
 plt.grid(axis='y')
+plt.xticks([0, 1, 2, 3, 4, 5])
 plt.tight_layout()
 plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_graduação.png')
+plt.clf()
 
+#Seção 5.1.2.3 - post-graduate
+
+estresse_postgraduate = df_final[df_final['academic_stage'] == 'post-graduate']['stress'].value_counts().sort_index()
+
+# Grafico
+plt.bar(estresse_postgraduate.index, estresse_postgraduate.values)
+
+#Embelezamento do grafico:
+plt.title("Distribuição do nível de estresse - Pós Graduação")
+plt.xlabel("Nivel de estresse relatado")
+plt.ylabel("Quantidade de estudantes")
+plt.grid(axis='y')
+plt.xticks([0, 1, 2, 3, 4, 5])
+plt.tight_layout() 
+plt.savefig(r'C:\Users\victo\Python_Senai390\Semana_3\distribuicao_estresse_pos_graduação.png')
+plt.clf()
