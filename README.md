@@ -44,6 +44,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 1. Atividade - Exploração e Análise Inicial de Dados Reais [Script.py](Semana_3/Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.py)
 [Notebook jupyter](Semana_3\Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.ipynb)
 2. Relatório - [Markdown](Semana_3/Relatorio.md)
+3. Seaborn - Introdução [Notebook jupyter](Semana_3\Seaborn_introducao.ipynb)
 
 ## Semana 4:
 
