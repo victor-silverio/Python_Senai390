@@ -1,5 +1,5 @@
 #Spider para extrair dados de livros do site books.toscrape.com.
-
+      
 import scrapy
 
 class CatalogoSpider(scrapy.Spider):
@@ -13,7 +13,7 @@ class CatalogoSpider(scrapy.Spider):
             yield {
                 'titulo': book.css('h3 a::attr(title)').get(),
                 'preco': book.css('.price_color::text').get(),
-                'disponibilidade': book.css('.availability::text').get().strip()
+                'disponibilidade': book.css('p.availability').xpath('normalize-space()').get()
             }
         
         # Encontra o link e segue
