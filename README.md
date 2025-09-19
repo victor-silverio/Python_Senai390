@@ -60,7 +60,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 1. Atividade - Titanic [Script.py](Semana_5\atividade_titanic\atividade_titanic.py)
 [Notebook jupyter](Semana_5\atividade_titanic\atividade_titanic.ipynb)
 
-2. Atividade - scrapy tutorial  - [Script.py](Semana_5\atividade_scrapy\scrapy_tutorial.py)
+2. Atividade - scrapy tutorial  - [Pasta](Semana_5\atividade_scrapy)
 
 ## Semana 6:
 * Pasta da semana 6: [Pasta](Semana_6)
