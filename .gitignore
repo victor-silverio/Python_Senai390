@@ -218,15 +218,8 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-#Ocultando Desafio_Final
-Desafio_Final/
-
-#Ocultando Semanas ainda não realizadas
-#Ainda que o git não suba sem arquivos dentro, irei ocultar por garantia.
-
 .vscode/
 
 #Outros
 desktop.ini
-Plano_de_Ensino/
 Materiais/

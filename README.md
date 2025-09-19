@@ -11,7 +11,7 @@
 
 ---
 
-## ⚠️ ⚠️ !!! Repositório em construção !!! ⚠️ ⚠️
+## ⚠️ ⚠️ !!! Repositório em finalização !!! ⚠️ ⚠️
 
 ---
 
@@ -47,14 +47,33 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 3. Seaborn - Introdução [Notebook jupyter](Semana_3\Seaborn_introducao.ipynb)
 
 ## Semana 4:
+* Pasta da semana 4: [Pasta](Semana_4)
+
+1. Atividade - Wine Quality[Script.py](Semana_4\atividade_wine\atividade_wine-quality.py)
+[Notebook jupyter](Semana_4\atividade_wine\atividade_wine.ipynb)
+
+2. Atividade - Regressão linear diabetes - [Script.py](Semana_4\atividade_diabetes\atividade_diabetes.py)
 
 ## Semana 5:
+* Pasta da semana 5: [Pasta](Semana_5)
+
+1. Atividade - Titanic [Script.py](Semana_5\atividade_titanic\atividade_titanic.py)
+[Notebook jupyter](Semana_5\atividade_titanic\atividade_titanic.ipynb)
+
+2. Atividade - scrapy tutorial  - [Script.py](Semana_5\atividade_scrapy\scrapy_tutorial.py)
+
+## Semana 6:
+* Pasta da semana 6: [Pasta](Semana_6)
+
+1. Atividade - Web scrapy[Script.py](Semana_6\atividade_web_scraping\web_scrapy.py)
 
 ## Desafio Final:
 
 * #### MovieScope
 
-> Ocultado Temporariamente!
+* Pasta do desafio: [Pasta](Desafio_Final)
+
+* MovieScope - [Script.py](Desafio_Final\MovieScope\MovieScope.py)
 
 ---
 
@@ -63,7 +82,9 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 * Pandas - [docs](https://pandas.pydata.org/docs/)
 * Matplotlib - [docs](https://matplotlib.org/stable/index.html)
 * Kaggle - [docs](https://www.kaggle.com/docs/api)
-
+* Seaborn - [link](https://seaborn.pydata.org)
+* Sklearn - [docs](https://scikit-learn.org/0.21/documentation.html)
+* Scrapy - [docs](https://docs.scrapy.org/en/latest/)
 ---
 
 # Informações de contato:
@@ -76,4 +97,4 @@ WhatsApp: [+55 (12) 99217-1061](https://wa.me//5512992171061?text=Olá,%20venho%
 
 ---
 
-### ⚠️⚠️!!! Repositório em construção !!!⚠️⚠️
+### ⚠️⚠️!!! Repositório em finalização !!!⚠️⚠️
