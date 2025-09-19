@@ -22,7 +22,7 @@ Obs: Desenvolvi em .py, mas irei postar em notebook .ipynb também, pois aí dá
 
 import pandas as pd
 
-path = r'C:\Users\victo\Python_Senai390\Semana_2\iris.csv' #path só pra ficar bonitinho
+path = r'Semana_2\data\iris.csv' #path só pra ficar bonitinho
 
 df = pd.read_csv(path)
 

@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 # Passo 1:
 # carrega o dataset de diabetes (separador é o tab, li como se fosse um csv)
-path = r'Semana_4\atividade_diabetes\data_original.txt'
+path = r'Semana_4\atividade_diabetes\data\data_original.txt'
 df_diabetes = pd.read_csv(path, sep='\\t')
 
 print("\n" + "---"*15 + "\n")
