@@ -69,7 +69,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 ## Desafio Final:
 
-* #### MovieScope
+#### MovieScope
 
 * Pasta do desafio: [Pasta](Desafio_Final)
 
