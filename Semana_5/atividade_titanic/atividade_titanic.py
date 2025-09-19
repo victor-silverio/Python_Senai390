@@ -81,7 +81,7 @@ sns.countplot(x='Survived', hue='Sex', data=df_treino_2)
 plt.title('Contagem de Sobreviventes por Sexo')
 plt.xlabel('Sobreviveu (0 = Não | 1 = Sim)')
 plt.ylabel('Contagem')
-plt.savefig(r'Semana_5\atividade_titanic\imagens\sobreviventes_por_sexo.png')
+plt.savefig(r'Semana_5\atividade_titanic\graficos\sobreviventes_por_sexo.png')
 plt.clf()
 
 # grafico de sobreviventes por classe
@@ -89,7 +89,7 @@ sns.countplot(x='Survived', hue='Pclass', data=df_treino_2)
 plt.title('Contagem de sobreviventes por classe')
 plt.xlabel('Sobreviveu (0 = Não | 1 = Sim)')
 plt.ylabel('Contagem')
-plt.savefig(r'Semana_5\atividade_titanic\imagens\sobreviventes_por_classe.png')
+plt.savefig(r'Semana_5\atividade_titanic\graficos\sobreviventes_por_classe.png')
 plt.clf()
 
 # preparando modelo
@@ -127,7 +127,7 @@ sns.histplot(df_treino_2['Fare_log'], kde=True, bins=30)
 plt.title('Distribuição das tarifas (em escala de Log)')
 plt.xlabel('Log(tarifa + 1)')
 plt.ylabel('Frequência')
-plt.savefig(r'Semana_5\atividade_titanic\imagens\distribuicao_tarifas_log.png')
+plt.savefig(r'Semana_5\atividade_titanic\graficos\distribuicao_tarifas_log.png')
 plt.clf()
 
 # grafico da tarifa por Status de Sobrevivência
@@ -135,7 +135,7 @@ sns.boxplot(x='Survived', y='Fare_log', data=df_treino_2)
 plt.title('Distribuição de tarifa (Log) por Sobrevivência')
 plt.xlabel('Sobreviveu (0 = Não | 1 = Sim)')
 plt.ylabel('Log(tarifa + 1)')
-plt.savefig(r'Semana_5\atividade_titanic\imagens\tarifa_por_sobrevivencia.png')
+plt.savefig(r'Semana_5\atividade_titanic\graficos\tarifa_por_sobrevivencia.png')
 plt.clf()
 
 print("\n" + "---"*15 + "\n")

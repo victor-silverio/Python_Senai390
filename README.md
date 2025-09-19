@@ -65,7 +65,9 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 ## Semana 6:
 * Pasta da semana 6: [Pasta](Semana_6)
 
-1. Atividade - Web scrapy[Script.py](Semana_6\atividade_web_scraping\web_scrapy.py)
+1. Atividade - spider [Script.py](Semana_6\livraria\livraria\spiders\catalogo_spider.py)
+[livros.csv](Semana_6\livraria\livros.csv)
+2. Atividade - Analise [Script.py](Semana_6\analise_scrap_livros.py)
 
 ## Desafio Final:
 

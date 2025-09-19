@@ -9,7 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # carrega o dataset e muda o separador do csv (padrão ",", mas o wine é ";")
-path = r'Semana_4\data\winequality-red.csv'
+path = r'Semana_4\atividade_wine\data\winequality-red.csv'
 df_vinhos = pd.read_csv(path, sep=';')
 #Pergunta 1: Usei o pandas pois ele é adequado para dados tabulares, numpy é melhor só para operações matematicas e arrays 'puros'
 
@@ -74,7 +74,7 @@ plt.title('Distribuição do Teor Alcoólico')
 plt.xlabel('Teor Alcoólico (em %)')
 plt.ylabel('Frequência')
 plt.grid(axis='y')
-plt.savefig(r'Semana_4\imagens\distribuicao_alcool.png')
+plt.savefig(r'Semana_4\atividade_wine\graficos\distribuicao_alcool.png')
 plt.clf()
 
 #relação entre álcool e qualidade do vinho
@@ -83,7 +83,7 @@ plt.title('Relação entre Qualidade e Teor Alcoólico')
 plt.xlabel('Qualidade do Vinho')
 plt.ylabel('Média de Teor Alcoólico (em %)')
 plt.grid(axis='y')
-plt.savefig(r'Semana_4\imagens\relacao_qualidade_alcool.png')
+plt.savefig(r'Semana_4\atividade_wine\graficos\relacao_qualidade_alcool.png')
 plt.clf()
 
 #boxplot para verificar outliers no pH
@@ -91,7 +91,7 @@ sns.boxplot(y=df_vinhos['pH'])
 plt.title('Boxplot do pH')
 plt.ylabel('pH')
 plt.grid(axis='y')
-plt.savefig(r'Semana_4\imagens\boxplot_ph.png')
+plt.savefig(r'Semana_4\atividade_wine\graficos\boxplot_ph.png')
 plt.clf()
 
 # pergunta 5: sobre os graficos:
@@ -116,7 +116,7 @@ print("\n" + "---"*15 + "\n")
 # plotando a matriz de correlação
 sns.heatmap(matriz_correlacao, annot=True, fmt='.2f', cmap='coolwarm')
 plt.title('Matriz de Correlação')
-plt.savefig(r'Semana_4\imagens\matriz_correlacao.png')
+plt.savefig(r'Semana_4\atividade_wine\graficos\matriz_correlacao.png')
 plt.clf()
 
 # Conclusão
