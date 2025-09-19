@@ -64,7 +64,7 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 ## Semana 6:
 * Pasta da semana 6: [Pasta](Semana_6)
-* Pasta do projeto: [Pasta](Semana_6\livraria)
+* Pasta do projeto: [Pasta](Semana_6/livraria)
 1. Spider [Script.py](Semana_6\livraria\livraria\spiders\catalogo_spider.py)
 [livros.csv](Semana_6\livraria\livros.csv)
 2. Atividade - Analise [Script.py](Semana_6\analise_scrap_livros.py)
