@@ -115,8 +115,8 @@ print("\n" + "---"*15 + "\n")
 
 # 1 - histograma da distribuição das notas
 sns.histplot(df_completo['vote_average'], bins=20, kde=True)
-plt.title('Distribuição das Notas Médias dos Filmes')
-plt.xlabel('Nota Média')
+plt.title('Distribuição das Notas médias dos Filmes')
+plt.xlabel('Nota média')
 plt.ylabel('Quantidade de Filmes')
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.savefig(r'Desafio_Final\MovieScope\graficos\grafico_distribuicao_notas.png')
@@ -124,9 +124,9 @@ plt.clf()
 
 # 2 dispersão de Orçamento vs. Receita
 sns.scatterplot(x='budget', y='revenue', data=df_orcamento_receita, alpha=0.5)
-plt.title('Orçamento vs. Receita dos Filmes')
-plt.xlabel('Orçamento (em centenas de milhões)')
-plt.ylabel('Receita (em bilhões)')
+plt.title('Orçamento vs Receita dos Filmes')
+plt.xlabel('Orçamento (centenas de milhões)')
+plt.ylabel('Receita (bilhões)')
 plt.grid(True)
 plt.savefig(r'Desafio_Final\MovieScope\graficos\grafico_orcamento_vs_receita.png')
 plt.clf()
@@ -136,7 +136,7 @@ top_generos = df_completo['genero_principal'].value_counts().nlargest(10).index
 df_top_generos = df_completo[df_completo['genero_principal'].isin(top_generos)]
 
 sns.boxplot(x='genero_principal', y='vote_average', data=df_top_generos)
-plt.title('Distribuição da Nota Média por Gênero Principal')
+plt.title('Distribuição da nota média por gênero principal')
 plt.xlabel('Gênero')
 plt.ylabel('Nota Média')
 plt.xticks(rotation=45)
@@ -164,7 +164,7 @@ contagem_diretores = df_completo['diretor'].value_counts().nlargest(10)
 # faço o grafico
 sns.barplot(x=contagem_diretores.values, y=contagem_diretores.index, palette='viridis', hue=contagem_diretores.index, legend=False)
 plt.title('Top 10 Diretores por Número de Filmes')
-plt.xlabel('Quantidade de Filmes')
+plt.xlabel('Qtd de Filmes')
 plt.ylabel('Diretor')
 plt.tight_layout()
 plt.savefig(r'Desafio_Final\MovieScope\graficos\grafico_filmes_por_diretor.png')
