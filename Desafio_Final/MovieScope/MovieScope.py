@@ -115,16 +115,16 @@ print("\n" + "---"*15 + "\n")
 
 # 1 - histograma da distribuição das notas
 sns.histplot(df_completo['vote_average'], bins=20, kde=True)
-plt.title('Distribuição das Notas médias dos Filmes')
+plt.title('Distribuição das notas médias dos filmes')
 plt.xlabel('Nota média')
-plt.ylabel('Quantidade de Filmes')
+plt.ylabel('Quantidade de filmes')
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.savefig(r'Desafio_Final\MovieScope\graficos\grafico_distribuicao_notas.png')
 plt.clf()
 
 # 2 dispersão de Orçamento vs. Receita
 sns.scatterplot(x='budget', y='revenue', data=df_orcamento_receita, alpha=0.5)
-plt.title('Orçamento vs Receita dos Filmes')
+plt.title('Orçamento vs Receita dos filmes')
 plt.xlabel('Orçamento (centenas de milhões)')
 plt.ylabel('Receita (bilhões)')
 plt.grid(True)
@@ -138,7 +138,7 @@ df_top_generos = df_completo[df_completo['genero_principal'].isin(top_generos)]
 sns.boxplot(x='genero_principal', y='vote_average', data=df_top_generos)
 plt.title('Distribuição da nota média por gênero principal')
 plt.xlabel('Gênero')
-plt.ylabel('Nota Média')
+plt.ylabel('Nota média')
 plt.xticks(rotation=45)
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
