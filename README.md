@@ -32,37 +32,33 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 1. Atividade - Introdução ao Colab e uso da lib statistics [Notebook jupyter](Semana_2/Atividade-Introdução_ao_Colab_e_uso_da_lib_statstics.ipynb)
 2. Atividade - Estatística Descritiva e Medidas de Dispersão (Google Colab) [Notebook jupyter](Semana_2/Atividade-Estatística_Descritiva_e_Medidas_de_Dispersão.ipynb)
-3. Atividade - Analisando o famoso dataset Iris [Arquivo .py](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.py) [Notebook jupyter](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.ipynb)
+3. Atividade - Analisando o famoso dataset Iris [Arquivo .py](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.py) | [Notebook jupyter](Semana_2/Atividade-Analisando_o_famoso_dataset_Iris.ipynb)
 
 ## Semana 3:
 * Pasta da semana 3: [Pasta](Semana_3)
 
-1. Atividade - Exploração e Análise Inicial de Dados Reais [Script.py](Semana_3/Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.py)
-[Notebook jupyter](Semana_3\Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.ipynb)
+1. Atividade - Exploração e Análise Inicial de Dados Reais [Script.py](Semana_3/Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.py) | [Notebook jupyter](Semana_3\Atividade-Exploração_e_Análise_Inicial_de_Dados_Reais.ipynb)
 2. Relatório - [Markdown](Semana_3/Relatorio.md)
 3. Seaborn - Introdução [Notebook jupyter](Semana_3\Seaborn_introducao.ipynb)
 
 ## Semana 4:
 * Pasta da semana 4: [Pasta](Semana_4)
 
-1. Atividade - Wine Quality[Script.py](Semana_4\atividade_wine\atividade_wine-quality.py)
-[Notebook jupyter](Semana_4\atividade_wine\atividade_wine.ipynb)
+1. Atividade - Wine Quality [Script.py](Semana_4\atividade_wine\atividade_wine-quality.py) | [Notebook jupyter](Semana_4\atividade_wine\atividade_wine.ipynb)
 
 2. Atividade - Regressão linear diabetes - [Script.py](Semana_4\atividade_diabetes\atividade_diabetes.py)
 
 ## Semana 5:
 * Pasta da semana 5: [Pasta](Semana_5)
 
-1. Atividade - Titanic [Script.py](Semana_5\atividade_titanic\atividade_titanic.py)
-[Notebook jupyter](Semana_5\atividade_titanic\atividade_titanic.ipynb)
+1. Atividade - Titanic [Script.py](Semana_5\atividade_titanic\atividade_titanic.py) | [Notebook jupyter](Semana_5\atividade_titanic\atividade_titanic.ipynb)
 
 2. Atividade - scrapy tutorial  - [Pasta](Semana_5\atividade_scrapy)
 
 ## Semana 6:
 * Pasta da semana 6: [Pasta](Semana_6)
 * Pasta do projeto: [Pasta](Semana_6/livraria)
-1. Spider [Script.py](Semana_6\livraria\livraria\spiders\catalogo_spider.py)
-[livros.csv](Semana_6\livraria\livros.csv)
+1. Spider [Script.py](Semana_6\livraria\livraria\spiders\catalogo_spider.py) | [livros.csv](Semana_6\livraria\livros.csv)
 2. Atividade - Analise [Script.py](Semana_6\analise_scrap_livros.py)
 
 ## Desafio Final:
@@ -71,7 +67,8 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 * Pasta do desafio: [Pasta](Desafio_Final)
 
-* MovieScope - [Script.py](Desafio_Final\MovieScope\MovieScope.py)
+* MovieScope - [Script.py](Desafio_Final\MovieScope\MovieScope.py) | [Notebook jupyter](Desafio_Final\MovieScope\MovieScope.ipynb)
+* MovieScope - [Apresentação](Desafio_Final\MovieScope\MovieScope.py)
 
 ---
 
