@@ -1,0 +1,161 @@
+---------------------------------------------
+
+Cabeçalho do dataset filmes
+
+      budget                                             genres                                      homepage  ...                                     title vote_average vote_count
+0  237000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...                   http://www.avatarmovie.com/  ...                                    Avatar          7.2      11800
+1  300000000  [{"id": 12, "name": "Adventure"}, {"id": 14, "...  http://disney.go.com/disneypictures/pirates/  ...  Pirates of the Caribbean: At World's End          6.9       4500
+2  245000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...   http://www.sonypictures.com/movies/spectre/  ...                                   Spectre          6.3       4466
+3  250000000  [{"id": 28, "name": "Action"}, {"id": 80, "nam...            http://www.thedarkknightrises.com/  ...                     The Dark Knight Rises          7.6       9106
+4  260000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...          http://movies.disney.com/john-carter  ...                               John Carter          6.1       2124
+
+[5 rows x 20 columns]
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+Cabeçalho do dataset creditos
+
+   movie_id                                     title                                               cast                                               crew
+0     19995                                    Avatar  [{"cast_id": 242, "character": "Jake Sully", "...  [{"credit_id": "52fe48009251416c750aca23", "de...
+1       285  Pirates of the Caribbean: At World's End  [{"cast_id": 4, "character": "Captain Jack Spa...  [{"credit_id": "52fe4232c3a36847f800b579", "de...
+2    206647                                   Spectre  [{"cast_id": 1, "character": "James Bond", "cr...  [{"credit_id": "54805967c3a36829b5002c41", "de...
+3     49026                     The Dark Knight Rises  [{"cast_id": 2, "character": "Bruce Wayne / Ba...  [{"credit_id": "52fe4781c3a36847f81398c3", "de...
+4     49529                               John Carter  [{"cast_id": 5, "character": "John Carter", "c...  [{"credit_id": "52fe479ac3a36847f813eaa3", "de...
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+Cabeçalho do dataset mesclado
+
+      budget                                             genres  ...                                               cast                                               crew
+0  237000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...  ...  [{"cast_id": 242, "character": "Jake Sully", "...  [{"credit_id": "52fe48009251416c750aca23", "de...
+1  300000000  [{"id": 12, "name": "Adventure"}, {"id": 14, "...  ...  [{"cast_id": 4, "character": "Captain Jack Spa...  [{"credit_id": "52fe4232c3a36847f800b579", "de...
+2  245000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...  ...  [{"cast_id": 1, "character": "James Bond", "cr...  [{"credit_id": "54805967c3a36829b5002c41", "de...
+3  250000000  [{"id": 28, "name": "Action"}, {"id": 80, "nam...  ...  [{"cast_id": 2, "character": "Bruce Wayne / Ba...  [{"credit_id": "52fe4781c3a36847f81398c3", "de...
+4  260000000  [{"id": 28, "name": "Action"}, {"id": 12, "nam...  ...  [{"cast_id": 5, "character": "John Carter", "c...  [{"credit_id": "52fe479ac3a36847f813eaa3", "de...
+
+[5 rows x 22 columns]
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+Valores nulos atuais
+
+budget                     0
+genres                     0
+homepage                3091
+id                         0
+keywords                   0
+original_language          0
+original_title             0
+overview                   3
+popularity                 0
+production_companies       0
+production_countries       0
+release_date               1
+revenue                    0
+runtime                    2
+spoken_languages           0
+status                     0
+tagline                  844
+title                      0
+vote_average               0
+vote_count                 0
+cast                       0
+crew                       0
+dtype: int64
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+dados pós tratamento:
+
+budget                  0
+genres                  0
+id                      0
+keywords                0
+original_language       0
+original_title          0
+popularity              0
+production_companies    0
+production_countries    0
+release_date            0
+revenue                 0
+runtime                 0
+spoken_languages        0
+title                   0
+vote_average            0
+vote_count              0
+cast                    0
+crew                    0
+dtype: int64
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+após extração do genero principal
+
+0       Action
+1    Adventure
+2       Action
+3       Action
+4       Action
+Name: genero_principal, dtype: object
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+estastiticas dos filmes com orçamento e receita
+
+              budget       revenue  vote_average  popularity  vote_count  runtime
+mean    4.065444e+07  1.212430e+08          6.31       29.03      977.29   110.72
+median  2.500000e+07  5.518472e+07          6.30       20.41      471.00   107.00
+std     4.439674e+07  1.863029e+08          0.87       36.17     1414.31    20.97
+var     1.971071e+15  3.470876e+16          0.76     1307.96  2000271.58   439.56
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+análise
+
+no orçamento e na receita, a media é bem maior que a mediana, oque indica a presença de outliers, provavente por causa de filmes gigantescos (como vingadores, disney e etc), que faz a média subir, enquanto a maioria dos filmes ter orçamento e lucros menores.
+ A nota média e a mediana, são bem parecitas, oque bate com o desvio padrão baixo. e que a maioria das notas é em torno de 6
+A popularidade também tem uma diferença muito grande entre a média e a mediana, indicando a presença de outliers, ou seja, poucos filmes alcançam uma audiencia altissima
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+avaliacao do modelo:
+
+MSE: 0.57
+RMSE: 0.76
+R²: 0.33
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+Análise do Modelo Preditivo
+
+ o modelo obteve um r² de 0.33, ou seja, tem uma variação de 33% que pode ser explicada com as variaveis que foram escolhidas
+Este modelo tem um resultado modesto, oque diz que as metricas embora tem certa influencia, não é exatamente oque diz se vai ser bom ou não.
+
+---------------------------------------------
