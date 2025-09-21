@@ -69,6 +69,12 @@ Este repositório será utlilizado para armazenar os programas & JupyterNotebook
 
 * MovieScope - [Script.py](Desafio_Final\MovieScope\MovieScope.py) | [Notebook jupyter](Desafio_Final\MovieScope\MovieScope.ipynb)
 * MovieScope - [Apresentação](Desafio_Final\MovieScope\MovieScope.py)
+>  é necessário baixar a apresentação, o github não permite visualização integrada!
+
+## Outros Materiais:
+> A maioria deles não é possível/recomendada a abertura via interface web do github, para visualização, realize o clone ou o download manual!
+* [Abra aqui!](Materiais)
+
 
 ---
 
